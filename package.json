@@ -1,0 +1,29 @@
+{
+  "name": "ootsy",
+  "private": true,
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "webpack": "webpack --watch --mode=development",
+    "postinstall": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Colemartindale/Ootsy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Colemartindale/Ootsy/issues"
+  },
+  "homepage": "https://github.com/Colemartindale/Ootsy#readme"
+}
+
