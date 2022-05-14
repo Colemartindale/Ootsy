@@ -24,6 +24,8 @@
   "bugs": {
     "url": "https://github.com/Colemartindale/Ootsy/issues"
   },
-  "homepage": "https://github.com/Colemartindale/Ootsy#readme"
+  "homepage": "https://github.com/Colemartindale/Ootsy#readme",
+  "dependencies": {
+    "thunk": "^0.0.1"
+  }
 }
-
