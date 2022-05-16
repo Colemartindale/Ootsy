@@ -29,6 +29,7 @@ function Modal({modal, closeModal}) {
 }
 
 const mSTP = state => {
+  // debugger
   return {
     modal: state.ui.modal
   };

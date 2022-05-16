@@ -8,21 +8,21 @@ import {
   HashRouter
 } from 'react-router-dom';
 import Modal from './modal/modal';
-
+import GreetingContainer from './greeting/greeting_container';
 
 
 const App = () => (
     <div>
       <Modal />
-      <header>
-        <Link to="/" className="header-link">
+      <header className='header'>
+        <Link to="/">
           <h1>Ootsy</h1>
         </Link>
         <GreetingContainer />
       </header>
-      <Switch>
+      {/* <Switch>
         
-      </Switch>
+      </Switch> */}
     </div>
   );
   
