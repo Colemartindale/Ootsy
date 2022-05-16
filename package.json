@@ -26,6 +26,10 @@
   },
   "homepage": "https://github.com/Colemartindale/Ootsy#readme",
   "dependencies": {
+    "babel-loader": "^8.2.5",
     "thunk": "^0.0.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
   }
 }

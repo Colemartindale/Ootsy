@@ -1,7 +1,8 @@
-import { postUser, postSession, deleteSession } from '../api_util/session';
+import { signup, login, logout } from '../api_util/session';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
+export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 const receiveCurrentUser = user => ({
     type: RECEIVE_CURRENT_USER,
@@ -12,11 +13,16 @@ const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
 });
 
-export const createNewUser = formUser => dispatch => postUser(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
+const receiveErrors = errors => ({
+    type: RECEIVE_ERRORS,
+    errors
+});
 
-export const login = formUser => dispatch => postSession(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
+export const signup = formUser => dispatch => signup(formUser)
+    .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
 
-export const logout = () => dispatch => deleteSession()
-    .then(() => dispatch(logoutCurrentUser()));
+export const login = formUser => dispatch => login(formUser)
+    .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
+
+export const logout = () => dispatch => logout()
+    .then(() => dispatch(logoutCurrentUser()), errors => dispatch(receiveErrors(errors)));
