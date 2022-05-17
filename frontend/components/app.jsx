@@ -9,16 +9,19 @@ import {
 } from 'react-router-dom';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
-
+import SearchBar from './search/search';
+import Cart from './cart/cart';
 
 const App = () => (
-    <div>
+    <div className='main'>
       <Modal />
       <header className='header'>
-        <Link to="/">
+        <Link to="/" className='ootsy-home'>
           <h1>Ootsy</h1>
         </Link>
+        <SearchBar />
         <GreetingContainer />
+        <Cart />
       </header>
       {/* <Switch>
         

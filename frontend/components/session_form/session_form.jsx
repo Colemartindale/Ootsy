@@ -11,6 +11,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+    this.props.resetErrors()
+  };
+  
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -39,26 +43,30 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Ootsy!
-          <br/>
-          Please {this.props.formType} or {this.props.otherForm}
+          <div className='modal-header'>
+            <span className='current-modal-form'>Sign in</span>
+            <span className='other-form-button'>{this.props.otherForm}</span>
+          </div>
+          
           <div onClick={this.props.closeModal} className="close-x">X</div>
-          {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Username:
+            <label>Email address
+              <br />
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
-              />
+                className="signin-input"
+                />
             </label>
+            <span className='errors'>{this.renderErrors()}</span>
             <br/>
-            <label>Password:
+            <label>Password
+              <br />
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="signin-input"
               />
             </label>
             <br/>
