@@ -10,16 +10,16 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       <button onClick={() => openModal('signup')}>Signup</button> */}
     </nav>
   );
-  const personalGreeting = () => (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.email}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
+  const personalIcons = () => (
+    <ul className="profile-dropdown">
+      <img src={window.profilePicLogo} className='profile-logo' />
+      <button className="logout-button" onClick={logout}>Log Out</button>
+    </ul>
   );
 
   return (
-    currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
+    currentUser ? personalIcons(currentUser, logout) : sessionLinks()
   );
 };
-
+ 
 export default Greeting;

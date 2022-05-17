@@ -16,12 +16,14 @@ const App = () => (
     <div className='main'>
       <Modal />
       <header className='header'>
-        <Link to="/" className='ootsy-home'>
-          <h1>Ootsy</h1>
-        </Link>
-        <SearchBar />
-        <GreetingContainer />
-        <Cart />
+        <ul className='header-links'>
+          <li className='ootsy-logo-li'><Link to="/" className='ootsy-home'>
+            <h1>Ootsy</h1>
+          </Link></li>
+          <li className='search-li'><SearchBar /></li>
+          <li className='greeting-li'><GreetingContainer /></li>
+          <li className='cart-li'><Cart /></li>
+        </ul>
       </header>
       {/* <Switch>
         

@@ -9,12 +9,13 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
+    this.signInDemo = this.signInDemo.bind(this);
+  };
 
   componentDidMount(){
     this.props.resetErrors()
   };
-  
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -26,6 +27,12 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal);
   }
+
+  signInDemo(e) {
+    e.preventDefault();
+    const user = {email: 'demo-email', password: 'demopw'}
+    this.props.processForm(user).then(this.props.closeModal);
+  };
 
   renderErrors() {
     return(
@@ -40,29 +47,37 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    let errorOcc;
+    let errors;
+    if (this.props.errors.length > 0) {
+      errorOcc = 'error-occ'
+      errors = 'errors'
+    } else {
+      errorOcc = 'signin-input'
+      errors = ""
+    }
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <div className='modal-header'>
-            <span className='current-modal-form'>Sign in</span>
+            <span className='current-modal-form'>{this.props.formType}</span>
             <span className='other-form-button'>{this.props.otherForm}</span>
           </div>
           
           <div onClick={this.props.closeModal} className="close-x">X</div>
           <div className="login-form">
             <br/>
-            <label>Email address
-              <br />
+            <label> <span className='input-title'>Email address</span> 
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signin-input"
-                />
+                className={errorOcc}
+              />
             </label>
-            <span className='errors'>{this.renderErrors()}</span>
+            <span className={errors}>{this.renderErrors()}</span>
             <br/>
-            <label>Password
-              <br />
+            <br />
+            <label> <span className='input-title'>Password</span> 
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -71,6 +86,7 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <button onClick={this.signInDemo} className='demo-user'>Demo User Sign in</button>
           </div>
         </form>
       </div>

@@ -64,6 +64,7 @@
     align-items: center;
     transition: all 0.5s;
     transform: translate(50%, -50%);
+    font-family: sans-serif;
 }
 
 .close-x:hover {
@@ -73,13 +74,30 @@
     height: 50px;
 }
 
+.other-form-button {
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .register-button {
     height: 32px;
     background: none;
     border: black 2px solid;
     border-radius: 25px;
     width: 78px;
-    font-weight: 500;
+    font-weight: 525;
+    // position: absolute;
+    // right: 0;
+    // top: -18px;
+}
+
+
+.register-button:hover {
+    box-shadow: 0 1px 4px 0 rgba(34, 34, 34, 50%);
+    width: 80px;
+    height: 35px;
 }
 
 .modal-header {
@@ -88,12 +106,12 @@
     align-items: center;
     width: 100%;
     height: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .login-form {
     width: 100%;
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +120,15 @@
 }
 
 .login-form label {
-    width: 100%;
+    width: 100%; 
+}
+
+.input-title {
+    display: block;
+    transform: translateY(-10px);
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 13px;
 }
 
 .session-submit {
@@ -111,27 +137,70 @@
     border-radius: 25px;
     color: white;
     width: 100%;
-    height: 40px;
+    height: 45px;
     font-size: 16px;
-    transition: all 0.3s;
+    transition: all 0.2s;
     position: absolute;
-    bottom: -75px;
+    bottom: -80px;
 }
 
 .session-submit:hover {
     background-color: rgb(42, 42, 42);
-    height: 45px;
-    width: 105%;
+    height: 48px;
+    width: 103%;
+    transform: scaleX(1) scaleY(1) perspective(1px);
 }
 
 .signin-input {
-      width: 100%;
-      height: 50px;
-      border-radius: 10px;
-      border: 2px solid rgb(218, 218, 218);
-      
-  }
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    box-shadow: 0 1px 4px 0 rgba(34, 34, 34, 10%) inset;
+    padding-left: 10px;
+}
 
-  .errors {
-      color: red;
-  }
+.signin-input:hover {
+    border: 1px solid rgb(102, 102, 102);
+    transition: border ease-in 250ms;
+}
+
+.signin-input:focus {
+    outline: 2px solid #4c6bc6;
+    outline-offset: 2px;
+}
+
+.error-occ {
+    background-color: #FDDCD8;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid rgba(166, 26, 46, 0.35);
+}
+
+.error-occ:focus{
+    outline: 2px solid #4c6bc6;
+    outline-offset: 2px;
+}
+
+.errors {
+    color: #A61A2E;
+    margin: 5px;
+    height: 20px;
+    width: 100%;
+    display: block;
+    transform: translateY(10px);
+}
+
+.demo-user {
+    position: absolute;
+    bottom: -120px;
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.demo-user:hover {
+    color: #ffaba1;
+}
+

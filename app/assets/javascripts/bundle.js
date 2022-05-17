@@ -181,10 +181,20 @@ var App = function App() {
     className: "main"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
     className: "header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+    className: "header-links"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    className: "ootsy-logo-li"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
     to: "/",
     className: "ootsy-home"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Ootsy")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_search_search__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_cart_cart__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Ootsy"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    className: "search-li"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_search_search__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    className: "greeting-li"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    className: "cart-li"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_cart_cart__WEBPACK_IMPORTED_MODULE_5__["default"], null)))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -290,18 +300,19 @@ var Greeting = function Greeting(_ref) {
     }, "Sign in"));
   };
 
-  var personalGreeting = function personalGreeting() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hgroup", {
-      className: "header-group"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-      className: "header-name"
-    }, "Hi, ", currentUser.email, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-      className: "header-button",
+  var personalIcons = function personalIcons() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+      className: "profile-dropdown"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+      src: window.profilePicLogo,
+      className: "profile-logo"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+      className: "logout-button",
       onClick: logout
     }, "Log Out"));
   };
 
-  return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
+  return currentUser ? personalIcons(currentUser, logout) : sessionLinks();
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Greeting);
@@ -644,6 +655,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       password: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.signInDemo = _this.signInDemo.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -669,6 +681,16 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       this.props.processForm(user).then(this.props.closeModal);
     }
   }, {
+    key: "signInDemo",
+    value: function signInDemo(e) {
+      e.preventDefault();
+      var user = {
+        email: 'demo-email',
+        password: 'demopw'
+      };
+      this.props.processForm(user).then(this.props.closeModal);
+    }
+  }, {
     key: "renderErrors",
     value: function renderErrors() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, this.props.errors.map(function (error, i) {
@@ -680,6 +702,17 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var errorOcc;
+      var errors;
+
+      if (this.props.errors.length > 0) {
+        errorOcc = 'error-occ';
+        errors = 'errors';
+      } else {
+        errorOcc = 'signin-input';
+        errors = "";
+      }
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "login-form-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
@@ -689,21 +722,25 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         className: "modal-header"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "current-modal-form"
-      }, "Sign in"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      }, this.props.formType), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "other-form-button"
       }, this.props.otherForm)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         onClick: this.props.closeModal,
         className: "close-x"
       }, "X"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "login-form"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Email address", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        className: "input-title"
+      }, "Email address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
         type: "text",
         value: this.state.email,
         onChange: this.update('email'),
-        className: "signin-input"
+        className: errorOcc
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-        className: "errors"
-      }, this.renderErrors()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Password", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+        className: errors
+      }, this.renderErrors()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        className: "input-title"
+      }, "Password"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password'),
@@ -712,7 +749,10 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      }))));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        onClick: this.signInDemo,
+        className: "demo-user"
+      }, "Demo User Sign in"))));
     }
   }]);
 
@@ -750,7 +790,7 @@ var mSTP = function mSTP(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors.session,
-    formType: 'sign up'
+    formType: 'Sign up'
   };
 };
 
@@ -762,7 +802,8 @@ var mDTP = function mDTP(dispatch) {
     otherForm: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", {
       onClick: function onClick() {
         return dispatch((0,_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__.openModal)('login'));
-      }
+      },
+      className: "register-button"
     }, "Login"),
     closeModal: function closeModal() {
       return dispatch((0,_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__.closeModal)());
@@ -950,10 +991,14 @@ var sessionReducer = function sessionReducer() {
 
   switch (action.type) {
     case _actions_session__WEBPACK_IMPORTED_MODULE_1__.RECEIVE_CURRENT_USER:
-      var currentUser = action.currentUser;
-      return lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()({}, {
+      var currentUser = action.user; // return merge({}, { currentUser });
+
+      return {
         currentUser: currentUser
-      });
+      };
+
+    case _actions_session__WEBPACK_IMPORTED_MODULE_1__.LOGOUT_CURRENT_USER:
+      return _nullUser;
 
     default:
       return state;
