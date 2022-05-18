@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 // const Greeting = ({ currentUser, logout, openModal }) => {
 class Greeting extends React.Component {
@@ -46,7 +46,7 @@ class Greeting extends React.Component {
           </div>
           <div className='orders-container'>
             <img src={window.ordersIcon} className='orders-icon' />
-            <span>Order History</span>
+            <Link to='/orders'>Order History</Link>
           </div>
           <div className='sign-out-container'>
             <img src={window.signOutIcon} className='sign-out-icon' />

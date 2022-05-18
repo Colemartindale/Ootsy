@@ -5,7 +5,6 @@ import {
   Redirect,
   Switch,
   Link,
-  HashRouter
 } from 'react-router-dom';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
@@ -15,6 +14,7 @@ import Cart from './cart/cart';
 const App = () => (
     <div className='main'>
       <Modal />
+      <div className='nav-bar'>
       <header className='header'>
         <ul className='header-links'>
           <li className='ootsy-logo-li'><Link to="/" className='ootsy-home'>
@@ -25,8 +25,12 @@ const App = () => (
           <li className='cart-li'><Cart /></li>
         </ul>
       </header>
+      </div>
       <Switch>
-        
+        <Route exact path='/' render={() => <h1>homepage</h1>}/>
+        <Route exact path='/orders' render={() => <h1>order History</h1>}/>
+        <Route exact path='/cart' render={() => <h1>Cart</h1>}/>
+        <Redirect to='/'/>
       </Switch>
     </div>
   );
