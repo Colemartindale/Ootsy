@@ -25,9 +25,9 @@ const App = () => (
           <li className='cart-li'><Cart /></li>
         </ul>
       </header>
-      {/* <Switch>
+      <Switch>
         
-      </Switch> */}
+      </Switch>
     </div>
   );
   
