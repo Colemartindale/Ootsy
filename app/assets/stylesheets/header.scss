@@ -145,7 +145,6 @@
 
 .dropdown-content {
     display: none;
-    // flex-direction: column;
     position: absolute;
     background-color: #fff;
     width: 200px;
@@ -158,9 +157,14 @@
     transform: translateY(100px);
 }
 
-.profile-dropdown:hover .dropdown-content {
+// .profile-dropdown:hover .dropdown-content {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+#show {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
 }
 
 .profile-logo {

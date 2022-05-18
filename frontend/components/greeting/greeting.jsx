@@ -10,9 +10,19 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       <button onClick={() => openModal('signup')}>Signup</button> */}
     </nav>
   );
+
+  const toggleDropDown = () => {
+    let dropDown = document.querySelector('.dropdown-content');
+    if (dropDown.id) {
+      dropDown.id = null
+    } else {
+      dropDown.id = 'show'
+    };
+  };
+
   const personalIcons = () => {
     return (
-      <div className="profile-dropdown">
+      <div className="profile-dropdown" onClick={toggleDropDown}>
         <img src={window.profilePicLogo} className='profile-logo' />
         <img src={window.downArrowIcon} className='down-arrow-icon' />
         <div className='dropdown-content'>

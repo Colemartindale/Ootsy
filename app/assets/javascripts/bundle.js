@@ -300,9 +300,22 @@ var Greeting = function Greeting(_ref) {
     }, "Sign in"));
   };
 
+  var toggleDropDown = function toggleDropDown() {
+    var dropDown = document.querySelector('.dropdown-content');
+
+    if (dropDown.id) {
+      dropDown.id = null;
+    } else {
+      dropDown.id = 'show';
+    }
+
+    ;
+  };
+
   var personalIcons = function personalIcons() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "profile-dropdown"
+      className: "profile-dropdown",
+      onClick: toggleDropDown
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
       src: window.profilePicLogo,
       className: "profile-logo"
