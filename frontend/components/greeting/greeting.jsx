@@ -10,12 +10,28 @@ const Greeting = ({ currentUser, logout, openModal }) => {
       <button onClick={() => openModal('signup')}>Signup</button> */}
     </nav>
   );
-  const personalIcons = () => (
-    <ul className="profile-dropdown">
-      <img src={window.profilePicLogo} className='profile-logo' />
-      <button className="logout-button" onClick={logout}>Log Out</button>
-    </ul>
-  );
+  const personalIcons = () => {
+    return (
+      <div className="profile-dropdown">
+        <img src={window.profilePicLogo} className='profile-logo' />
+        <img src={window.downArrowIcon} className='down-arrow-icon' />
+        <div className='dropdown-content'>
+          <div className='email-container'>
+            <img src={window.profilePicLogo} className='profile-logo' />
+            <span>{currentUser.email}</span>
+          </div>
+          <div className='orders-container'>
+            <img src={window.ordersIcon} className='orders-icon' />
+            <span>Order History</span>
+          </div>
+          <div className='sign-out-container'>
+            <img src={window.signOutIcon} className='sign-out-icon' />
+            <button className="logout-button" onClick={logout}>Log Out</button>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     currentUser ? personalIcons(currentUser, logout) : sessionLinks()
