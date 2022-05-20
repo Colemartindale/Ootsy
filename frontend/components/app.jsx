@@ -10,6 +10,7 @@ import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import SearchBar from './search/search';
 import Cart from './cart/cart';
+import ListingIndexContainer from './listing_index/listing_index_container';
 
 const App = () => (
     <div className='main'>
@@ -31,7 +32,7 @@ const App = () => (
       </header>
       </div>
       <Switch>
-        <Route exact path='/' render={() => <h1>homepage</h1>}/>
+        <Route exact path='/' component={ListingIndexContainer}/>
         <Route exact path='/orders' render={() => <h1>order History</h1>}/>
         <Route exact path='/cart' render={() => <h1>Cart</h1>}/>
         <Redirect to='/'/>
