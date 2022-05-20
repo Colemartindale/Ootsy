@@ -1,7 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
 .nav-bar {
+    width: min(100vw, 1350px);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    width: min(100vw, 1350px);
+    // width: 100%;
 }

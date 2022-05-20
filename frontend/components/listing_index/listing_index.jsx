@@ -16,9 +16,11 @@ class ListingIndex extends React.Component {
         };
         console.log(this.props.listings[0].photoUrl)
         return (
-            <ul>
-                {this.props.listings.map(listing => <li key={listing.id}><img src={listing.photoUrl} /></li>)}
-            </ul>
+            <div>
+                <ul className="index-ul">
+                    {this.props.listings.map(listing => <li key={listing.id}><img src={listing.photoUrl} /></li>)}
+                </ul>
+            </div>
         )
     };
 };

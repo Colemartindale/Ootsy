@@ -374,14 +374,15 @@ art3 = Listing.create!(
     art3.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/art-map.jpg"), filename: "art-map.jpg")
 
 art4 = Listing.create!(
-    product_name: "", 
-    description: "", 
-    price: , 
+    product_name: "Evergreen Trees FREE SHIP Screenprint - Art Print Silkscreen - Red Sun Northwest Forest Poster Woodland Art Print", 
+    description: "Dreaming of the forests...Evergreen is our hand silkscreen printed art print. Hand pulled screenprint of evergreen 
+        trees and a red sun.", 
+    price: 31.11, 
     category: "Art & Collectibles", 
-    quantity: , 
-    tags: "", 
-    shop_id: )
-    art4.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/art-.jpg"), filename: "")
+    quantity: 105, 
+    tags: "trees, art, painting, decor", 
+    shop_id: 4)
+    art4.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/art-trees.jpg"), filename: "art-trees.jpg")
 
 art5 = Listing.create!(
     product_name: 'Star Wars Millenium Falcon - Geek Decor - Print Poster', 
@@ -507,7 +508,7 @@ electronics1 = Listing.create!(
     quantity: 1, 
     tags: "video games, electronic, gameboy", 
     shop_id: 3)
-    electronics1.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/electronics-prof.jpg"), filename: "electronics-prof.jpg")
+    electronics1.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/electroics-prof.jpg"), filename: "electronics-prof.jpg")
 
 electronics2 = Listing.create!(
     product_name: "Gold Cable Organizer - Cord Keeper Management System For Home Office Desk, Nightstand, Wall and Car - 
@@ -615,34 +616,39 @@ fathers2 = Listing.create!(
     fathers2.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-desk-or.jpg"), filename: "fathers-desk-or.jpg")
 
 fathers3 = Listing.create!(
-    product_name: "", 
-    description: "", 
-    price: , 
+    product_name: "Bimini Ring Toss-Tiki Toss-Ring the Bull-Lawn Games-Ring Toss Drinking Games-Two-Player Ring Toss Game-", 
+    description: "This is a large 18” long by 16” tall ring toss game. Don’t be fooled by smaller imitations of my best selling Bimini 
+        game at a cheap price! My game is not made by a CNC machine or on an assembly line! Every one of my games are made one at a time, 
+        by hand, by me! This 2-player ring toss Bimini game is handcrafted one at a time in my workshop. ", 
+    price: 25.66, 
     category: "Father's Day Gifts", 
-    quantity: , 
-    tags: "", 
-    shop_id: )
-    fathers3.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-.jpg"), filename: "")
+    quantity: 8, 
+    tags: "father, gift, game, toss", 
+    shop_id: 5)
+    fathers3.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-game.jpg"), filename: "fathers-game.jpg")
 
 fathers4 = Listing.create!(
-    product_name: "", 
-    description: "", 
-    price: , 
+    product_name: "Dursten | Lore | Wood Kuksa Cup, Groomsmen Gift, Groomsman, Best Man Gifts, Gifts For Men, Nordic style, Eco-Friendly,
+    Camping, Hiking", 
+    description: "TWELVE FULL OUNCES —That’s 50% larger than your classic kuksa. The Lore boasts a large capacity. Perfectly sized for 
+        coffee, trail mix, or your favorite dehydrated backpacking meal.", 
+    price: 32.22, 
     category: "Father's Day Gifts", 
-    quantity: , 
-    tags: "", 
-    shop_id: )
-    fathers4.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-.jpg"), filename: "")
+    quantity: 36, 
+    tags: "fathers, gift, cup, norse", 
+    shop_id: 4)
+    fathers4.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-mug.jpg"), filename: "fathers-mug.jpg")
 
 fathers5 = Listing.create!(
-    product_name: "", 
-    description: "", 
-    price: , 
+    product_name: "Matching family socks, mommy and me, daddy and me socks, organic cotton with seamless toes, gender neutral socks", 
+    description: "Made from GOTS certified organic cotton with seamless toes for ultimate comfort. Grips are included on the 1-2, 
+        2-4 and 4-6 year sizes.", 
+    price: 34.95, 
     category: "Father's Day Gifts", 
-    quantity: , 
-    tags: "", 
-    shop_id: )
-    fathers5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-.jpg"), filename: "")
+    quantity: 63, 
+    tags: "socks, fathers, gift, family", 
+    shop_id: 3)
+    fathers5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-socks.jpg"), filename: "fathers-socks.jpg")
 
 
 
