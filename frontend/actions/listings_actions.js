@@ -24,7 +24,10 @@ export const fetchListing = listingId => dispatch => (
         .then(listing => dispatch(receiveListing(listing)))
 );
 
-
+export const fetchListingsByCategory = category => dispatch => (
+    APIListingUtil.fetchCategoryListings(category)
+        .then(listings => dispatch(receiveAllListings(listings)))
+);
 
 
 

@@ -9,3 +9,9 @@ export const fetchListing = listingId => (
         url: `/api/listings/${listingId}`
     })
 );
+
+export const fetchCategoryListings = category => (
+    $.ajax({
+        url: `/api/listings/category/${category}`
+    })
+);

@@ -11,6 +11,8 @@ import GreetingContainer from './greeting/greeting_container';
 import SearchBar from './search/search';
 import Cart from './cart/cart';
 import ListingIndexContainer from './listing_index/listing_index_container';
+import ListingShowContainer from './listing_show/listing_show_container';
+import CategoryContainer from './category_index/category_index_container';
 
 const App = () => (
     <div className='main'>
@@ -28,20 +30,22 @@ const App = () => (
         </header>
       </div>
       <ul className='categories-container'>
-        <li><Link className='cat'>Father's Day Gifts</Link></li>
-        <li><Link className='cat'>Jewelry & Accessories</Link></li>
-        <li><Link className='cat'>Clothing & Shoes</Link></li>
-        <li><Link className='cat'>Home & Living</Link></li>
-        <li><Link className='cat'>Super Smash Bros</Link></li>
-        <li><Link className='cat'>Toys & Entertainment</Link></li>
-        <li><Link className='cat'>Art & Collectibles</Link></li>
-        <li><Link className='cat'>Father's Day Gifts</Link></li>
+        <li><Link to='/listings/category/fathers' className='cat'>Father's Day Gifts</Link></li>
+        <li><Link to='/listings/category/accessories' className='cat'>Jewelry & Accessories</Link></li>
+        <li><Link to='/listings/category/clothing' className='cat'>Clothing & Shoes</Link></li>
+        <li><Link to='/listings/category/home' className='cat'>Home & Living</Link></li>
+        <li><Link to='/listings/category/smash' className='cat'>Super Smash Bros</Link></li>
+        <li><Link to='/listings/category/toys' className='cat'>Toys & Entertainment</Link></li>
+        <li><Link to='/listings/category/art' className='cat'>Art & Collectibles</Link></li>
+        <li><Link to='/listings/category/electronics' className='cat'>Electronics</Link></li>
       </ul>
       <span className='header-border'></span>
       <Switch>
         <Route exact path='/' component={ListingIndexContainer}/>
         <Route exact path='/orders' render={() => <h1>order History</h1>}/>
         <Route exact path='/cart' render={() => <h1>Cart</h1>}/>
+        <Route path='/listings/category/:category' component={CategoryContainer}/>
+        <Route path='/listings/:listingId' component={ListingShowContainer}/>
         <Redirect to='/'/>
       </Switch>
     </div>

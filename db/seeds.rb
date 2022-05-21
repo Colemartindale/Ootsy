@@ -37,7 +37,7 @@ jewelry1 = Listing.create!(
         with a basic buckle, this makes it the perfect belt to mix and match with all of your regan flegan belt buckles. 
         Please note, that since this is a handmade product the color and finish may vary slightly from the image shown.', 
     price: 29.99, 
-    category: 'Jewelry & Accessories', 
+    category: 'accessories', 
     quantity: 7, 
     tags: 'accessories, clothing, belt, leather', 
     shop_id: 1)
@@ -47,7 +47,7 @@ jewelry2 = Listing.create!(
     product_name: 'Mens Feather Earring', 
     description: 'Silver color feather earring for men. Comes with eco-friendly gift wrap, ready to be a present.', 
     price: 16.71, 
-    category: "Jewelry & Accessories", 
+    category: "accessories", 
     quantity: 20, 
     tags: 'earring, jewelry, silver, feather', 
     shop_id: 1)
@@ -59,7 +59,7 @@ jewelry3 = Listing.create!(
         This piece features multiple layers of hair around his face, each packed with hundreds of handset stones, staying true to what 
         makes Knuckles so iconic.", 
     price: 150.68, 
-    category: "Jewelry & Accessories", 
+    category: "accessories", 
     quantity: 10, 
     tags: 'necklace, knuckles, sonic, jewelry', 
     shop_id: 1)
@@ -71,7 +71,7 @@ jewelry4 = Listing.create!(
     description: 'Handmade item, Materials: Gold, Rose gold, Silver, Closure: Spring ring, Chain style: Cable, Adjustable length, 
         Style: Minimalist, Made to Order', 
     price: 19.79, 
-    category: "Jewelry & Accessories", 
+    category: "accessories", 
     quantity: 15, 
     tags: 'necklace, jewelry, gold, chain', 
     shop_id: 1)
@@ -83,20 +83,20 @@ jewelry5 = Listing.create!(
     description: "This beautiful Emerald Gold Ring was handmade in Melt'm Jewelry Design Studio in California using 14k solid yellow 
         gold band and 6x4mm emerald cut lab grown emerald stone. Emerald is featuring in 14k gold prong setting.", 
     price: 240.00, 
-    category: "Jewelry & Accessories", 
+    category: "accessories", 
     quantity: 3, 
     tags: 'ring, gold, jewelry, emerald', 
     shop_id: 1)
     jewelry5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/jewelry-ring.jpg"), filename: "jewelry-ring.jpg")
 
 
-# clothing & shoes
+# clothing
 clothes1 = Listing.create!(
     product_name: "Newborn Baby Boy Coming Home Outfit Set up to 3 Items. Suspender Bow Tie Bodysuit, Leg Warmers & Knit Newsboy Hat. 
         Easter Valentines Slate", 
     description: "The Set of 3 Includes: Newsboy Hat, Leg Warmers, Suspender Bow Tie Bodysuit", 
     price: 10.45, 
-    category: "Clothing & Shoes", 
+    category: "clothing", 
     quantity: 30, 
     tags: "baby, clothes, infant, apparel", 
     shop_id: 2)
@@ -111,7 +111,7 @@ clothes2 = Listing.create!(
         - High-quality rubber outsole for traction and exceptional durability. *Please note that colors may vary slightly from printed 
         items to images on screen due to different lighting, screen resolutions, and printer calibration.", 
     price: 79.65, 
-    category: "Clothing & Shoes", 
+    category: "clothing", 
     quantity: 20, 
     tags: "boots, shoes, clothing, floral", 
     shop_id: 2)
@@ -121,7 +121,7 @@ clothes3 = Listing.create!(
     product_name: "Hatphile Pattern Multi Color Jacquard 5 Panel Hat Camp Cap 7 1/4 58 cm Large", 
     description: "Unique jacquard 5 panel camper hat, Adjustable strapback for a custom fit, Large (58cm, 7 1/4) Polyester/cotton blend", 
     price: 17.99, 
-    category: "Clothing & Shoes", 
+    category: "clothing", 
     quantity: 50, 
     tags: "hat, headwear, clothing, caps", 
     shop_id: 2)
@@ -134,7 +134,7 @@ clothes4 = Listing.create!(
         these overalls will quickly become a favorite - the most easy wearing and comfortable one piece, you’ll reach for them again and 
         again.", 
     price: 79.00, 
-    category: "Clothing & Shoes", 
+    category: "clothing", 
     quantity: 2, 
     tags: "overalss, clothes, womens, yellow", 
     shop_id: 2)
@@ -159,7 +159,7 @@ clothes6 = Listing.create!(
         super comfy soft! → Bella-Canvas Unisex Jersey Short Sleeve Crew-Neck Unisex T-Shirt → Soft and High-Quality Fabric, sueded 
         pre-shrunk sueded jersey, taped shoulder-shoulder. → Sueded Jersey → Side Seamed → Retail fit", 
     price: 11.00, 
-    category: "Clothing & Shoes", 
+    category: "clothing", 
     quantity: 56, 
     tags: "shirt, womens, pink, owl", 
     shop_id: 2)
@@ -169,7 +169,7 @@ clothes7 = Listing.create!(
     product_name: "Greek Men Leather Sandals, summer men shoes, men flats", 
     description: "These sandals are custom made to order. Please contact me in case you have narrow or wide feet.", 
     price: 51.71, 
-    category: "Clothing & Shoes", 
+    category: "clothing", 
     quantity: 22, 
     tags: "shoes, mens, leather, sandals", 
     shop_id: 2)
@@ -180,14 +180,14 @@ clothes8 = Listing.create!(
     description: "Adventure Tshirt. The premium tee that goes with anything! Fun, casual, or workout tshirt says 'Seek Adventure' in a 
         trendy graphic.", 
     price: 24.99, 
-    category: "Clothing & Shoes", 
+    category: "clothing", 
     quantity: 5, 
     tags: "shirt, travel, adventure, clothing", 
     shop_id: 5)
     clothes8.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/clothes-shirt.jpg"), filename: "clothes-shirt.jpg" )
 
 
-# home & living
+# home
 home1 = Listing.create!(
     product_name: "Nature Wall Art Prints Landscape Mountain Decor - Mid-Century Wall Art, Mountain Wall Decor, 
         Scandinavian Poster UNFRAMED", 
@@ -196,7 +196,7 @@ home1 = Listing.create!(
         Each mountain painting brings out a strong connection to nature with its varying shades of blue, yellow and orange, 
         creating an effortlessly fresh and vintage mix", 
     price: 13.99, 
-    category: "Home & Living", 
+    category: "home", 
     quantity: 85, 
     tags: "art, picture, nature, decor", 
     shop_id: 4)
@@ -209,7 +209,7 @@ home2 = Listing.create!(
         It is also an ideal décor for a store, coffee shop outside or the inside. Crafted from weather-resistant solid wood, 
         this shelf is durable enough to be used outdoors year round.", 
     price: 105.98, 
-    category: "Home & Living", 
+    category: "home", 
     quantity: 20, 
     tags: "decor, plant, wood, home", 
     shop_id: 3)
@@ -222,7 +222,7 @@ home3 = Listing.create!(
         full of space crisscross and rich sense. Succulent plants, Narcissus, cactus, roses, lilies, tulips, daisies and so on, 
         your favorite.", 
     price: 117.17, 
-    category: "Home & Living", 
+    category: "home", 
     quantity: 20, 
     tags: "home, decor, plant, design", 
     shop_id: 3)
@@ -235,7 +235,7 @@ home4 = Listing.create!(
         26" Length X 25" Height (from the floor to the bottom) x 10” Depth
         Inner Space : 18.5" x 13" height', 
     price: 135.50, 
-    category: "Home & Living", 
+    category: "home", 
     quantity: 4, 
     tags: "table, decor, design, wood", 
     shop_id: 5)
@@ -251,19 +251,19 @@ home5 = Listing.create!(
         surfaces instead of straight lines. It is guaranteed that our designer products will give unique character and great joy in your 
         living area wherever it’s displayed.", 
     price: 1800.80, 
-    category: "Home & Living", 
+    category: "home", 
     quantity: 2, 
     tags: "table, home, kitchen, decor", 
     shop_id: 4)
     home5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-table.jpg"), filename: "home-table.jpg" )
 
 
-# Toys & Entertainment
+# toys
 toys1 = Listing.create!(
     product_name: "Buzz Lightyear Inspired Wings", 
     description: "These wings will have your little one looking to defeat the Evil Emperor Zurg!",
     price: 40.99, 
-    category: "Toys & Entertainment", 
+    category: "toys", 
     quantity: 13, 
     tags: "toys, buzz, costume, disney", 
     shop_id: 5)
@@ -275,7 +275,7 @@ toys2 = Listing.create!(
         creatively as possible. Stack them, Display them, Play with them, Personalise them, ...... a mini interactive cat display!
         The twelve tiny cats come in a drawstring Cotton Bag with a simple explanation card included.", 
     price: 16.89, 
-    category: "Toys & Entertainment", 
+    category: "toys", 
     quantity: 51, 
     tags: "cats, game, gift, toys", 
     shop_id: 1)
@@ -287,7 +287,7 @@ toys3 = Listing.create!(
     description: "JUMBO SIZE - Step up your game with this life size version of the classic four in a row game. 
         This oversized board game stands over 2ft tall x 3ft wide. Ideal size for both kids and adults.", 
     price: 119.99, 
-    category: "Toys & Entertainment", 
+    category: "toys", 
     quantity: 10, 
     tags: "game, family, gift, large", 
     shop_id: 3)
@@ -298,7 +298,7 @@ toys4 = Listing.create!(
         Boyfriend Gift Teen Gift", 
     description: "The Personalized Wooden Controller Stand is a versatile desk organizer. A stand where you can put your controllers.", 
     price: 51.95, 
-    category: "Toys & Entertainment", 
+    category: "toys", 
     quantity: 35, 
     tags: "controller, gift, wood, gaming", 
     shop_id: 4)
@@ -309,7 +309,7 @@ toys5 = Listing.create!(
     description: 'A beautiful betta fish plush!
         These plushies are approximately 10" tall, 12" long, and 2" wide.', 
     price: 35.01, 
-    category: "Toys & Entertainment", 
+    category: "toys", 
     quantity: 100, 
     tags: "fish, plush, kids, toy", 
     shop_id: 5)
@@ -320,7 +320,7 @@ toys6 = Listing.create!(
     description: "Little ones gotta move, and our old-school wooden toy truck moves right along with them. A tried and true favorite for 
         toddlers, choose an heirloom toy that will last long after childhood. Sturdy, safe, all natural, and drives like a charm!", 
     price: 16.50, 
-    category: "Toys & Entertainment", 
+    category: "toys", 
     quantity: 65, 
     tags: "car, wheels, toy, kids", 
     shop_id: 5)
@@ -333,19 +333,19 @@ toys7 = Listing.create!(
         The track ascends over 18” as it sweeps around two complete revolutions. Once reaching the summit, there is an S-turn where 
         after the track descends back to earth.", 
     price: 239.50, 
-    category: "Toys & Entertainment", 
+    category: "toys", 
     quantity: 12, 
     tags: "trains, kids, toys, wheels", 
     shop_id: 3)
     toys7.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/toys-trains.jpg"), filename: "toys-trains.jpg" )
 
 
-# Art & Collectibles
+# art
 art1 = Listing.create!(
     product_name: "Fire Escape New York Wall Art", 
     description: 'Beautiful home decor with oak wooden frame. Dimensions: L:24" X H:36"', 
     price: 24.99, 
-    category: "Art & Collectibles", 
+    category: "art", 
     quantity: 8, 
     tags: "building, art, picture, wall art", 
     shop_id: 2)
@@ -357,7 +357,7 @@ art2 = Listing.create!(
         Giclée prints on pure white, ultra smooth, 100% cotton rag, acid and lignin free archival paper using archival inks and are 
         individually signed.", 
     price: 12.32, 
-    category: "Art & Collectibles", 
+    category: "art", 
     quantity: 85, 
     tags: "water color, painting, wall decor, picture", 
     shop_id: 2)
@@ -367,7 +367,7 @@ art3 = Listing.create!(
     product_name: "World map wall art, World map print, World map poster, Map art print, Adventure Awaits Art, Wanderlust print", 
     description: "This 'adventure awaits' world map print in pastel tones would makes the perfect gift for anyone who loves to travel.", 
     price: 18.54, 
-    category: "Art & Collectibles", 
+    category: "art", 
     quantity: 74, 
     tags: "picture, wall decor, map, world map", 
     shop_id: 5)
@@ -378,7 +378,7 @@ art4 = Listing.create!(
     description: "Dreaming of the forests...Evergreen is our hand silkscreen printed art print. Hand pulled screenprint of evergreen 
         trees and a red sun.", 
     price: 31.11, 
-    category: "Art & Collectibles", 
+    category: "art", 
     quantity: 105, 
     tags: "trees, art, painting, decor", 
     shop_id: 4)
@@ -388,7 +388,7 @@ art5 = Listing.create!(
     product_name: 'Star Wars Millenium Falcon - Geek Decor - Print Poster', 
     description: 'Star Wars Millenium Falcon - Geek Decor - Patent Print Poster Wall Decor - 0068', 
     price: 11.05, 
-    category: "Art & Collectibles", 
+    category: "art", 
     quantity: 5, 
     tags: 'star wars, art, picture', 
     shop_id: 1)
@@ -402,50 +402,50 @@ art6 = Listing.create!(
         -The appearance of colours may vary from monitor to monitor.
         -All posters are shipped rolled inside cardboard tubes or hard envelopes.", 
     price: 12.55, 
-    category: "Art & Collectibles", 
+    category: "art", 
     quantity: 101, 
     tags: "picasso, painting, wall art, decor", 
     shop_id: 2)
     art6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/art-prof.jpg"), filename: "art-prof.jpg")
 
 
-# Super Smash Bros
+# smash
 smash1 = Listing.create!(
     product_name: "Kirby Burger Art Print", 
     description: "Kirby Burger art print is available as a giclee on archival matte paper. 
         This print is perfect for gamers that adore the Kirby series!", 
     price: 20.10, 
-    category: "Super Smash Bros", 
+    category: "smash", 
     quantity: 120, 
     tags: "video games, kirby, smash bros, nintendo", 
     shop_id: 5)
     smash1.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-kirby.jpg"), filename: "smash-kirby.jpg")
 
 smash2 = Listing.create!(
-    product_name: "Super Smash Bros Mug Gamer Gift Personalized Gift For Him Wooden Beer Mug Beer Stein Beer Tankard Gift for 
+    product_name: "smash Mug Gamer Gift Personalized Gift For Him Wooden Beer Mug Beer Stein Beer Tankard Gift for 
         Husband Mug Geek Gift for Gamer", 
     description: "If you want to surprise or please somebody with a unique gift, our wooden beer mug is a great choice for this purpose!", 
     price: 30.95, 
-    category: "Super Smash Bros", 
+    category: "smash", 
     quantity: 21, 
     tags: "smash bros, mug, gift, nintendo", 
     shop_id: 4)
     smash2.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-mug.jpg"), filename: "smash-mug.jpg")
 
 smash3 = Listing.create!(
-    product_name: "Super Smash Bros. - for N64 consoles - working cartridge / game pak - NTSC or PAL region - great condition // 
+    product_name: "smash. - for N64 consoles - working cartridge / game pak - NTSC or PAL region - great condition // 
         fighting fighter crossover", 
-    description: "This is a working cartridge of the SUPER SMASH BROS. videogame for the Nintendo 64 video game console. 
+    description: "This is a working cartridge of the smash. videogame for the Nintendo 64 video game console. 
         (Comes with the cartridge only! There is no product box, manuals, etc.)", 
     price: 18.50, 
-    category: "Super Smash Bros", 
+    category: "smash", 
     quantity: 1, 
     tags: "smash bros, nintendo, video games, fun", 
     shop_id: 3)
     smash3.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-n64.jpg"), filename: "smash-n64.jpg")
 
 smash4 = Listing.create!(
-    product_name: "Super Smash Bros Ball Emblem Embroidered Custom Iron-On or Sew-On Patch, Limited Edition Patches, Custom Patches, 
+    product_name: "smash Ball Emblem Embroidered Custom Iron-On or Sew-On Patch, Limited Edition Patches, Custom Patches, 
         Patch, 90s Kid Patches", 
     description: "- You Will Be Receiving 1x Custom Limited Edition Patch
         - All Patches Measure Roughly 3 Inches!  
@@ -453,20 +453,20 @@ smash4 = Listing.create!(
         - Can Be Used as either Iron-On or Sew-On
         - Superior Quality Made To Last!", 
     price: 7.88, 
-    category: "Super Smash Bros", 
+    category: "smash", 
     quantity: 130, 
     tags: "smash bros, patch, nintendo, gift", 
     shop_id: 2)
     smash4.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-patch.jpg"), filename: "smash-patch.jpg")
 
 smash5 = Listing.create!(
-    product_name: 'Super Smash Bros. - Smash gang 2" enamel pin or magnet - Classic N64 game enamel pin - retro gaming', 
-    description: "The Super Smash Bros gang enamel pin, characters from the classic N64 video game Super Smash the 64— 
+    product_name: 'smash. - Smash gang 2" enamel pin or magnet - Classic N64 game enamel pin - retro gaming', 
+    description: "The smash gang enamel pin, characters from the classic N64 video game Super Smash the 64— 
         The pin stands 2” tall and has a two pin double-clutch back for extra stability when pinning. 
         It is made of soft enamel zinc alloy with a black dyed plating. Looks great on your backpack, shirt, jacket, blanket, 
         display piece, canvas game scene background or whatever you decided to pin it to!", 
     price: 12.99, 
-    category: "Super Smash Bros", 
+    category: "smash", 
     quantity: 99, 
     tags: "smash bros, video games, gift, nintendo", 
     shop_id: 1)
@@ -479,32 +479,32 @@ smash6 = Listing.create!(
         These posters are printed on durable plastic and will be shipped in a flat box. 
         Made in the USA!", 
     price: 19.99, 
-    category: "Super Smash Bros", 
+    category: "smash", 
     quantity: 39, 
     tags: "smash bros, video games, nintendo, poster", 
     shop_id: 5)
     smash6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-poster.jpg"), filename: "smash-poster.jpg")
 
 smash7 = Listing.create!(
-    product_name: "Mario Super Smash Bros Symbol Vinyl Graphic Decal Bumper Sticker Car Truck Laptop - Many color and size options!", 
+    product_name: "Mario smash Symbol Vinyl Graphic Decal Bumper Sticker Car Truck Laptop - Many color and size options!", 
     description: "A custom made-to-order vinyl decal. A great addition to any Mario enthusiast's collection. All orders are free 
         shipping! All vinyl cuts come with transfer paper pre-applied. All transfer paper is rubbed on fabric before application to the 
         sticker, allowing easy removal.", 
     price: 4.45, 
-    category: "Super Smash Bros", 
+    category: "smash", 
     quantity: 200, 
     tags: "sticker, smash bros, gift, video games", 
     shop_id: 4)
     smash7.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-prof.jpg"), filename: "smash-prof.jpg")
 
 
-# Electronics
+# electronics
 electronics1 = Listing.create!(
     product_name: "For the Frog the Bell Tolls RPG English Translated Repro Gameboy Nintendo", 
     description: "Up for sale is For the Frog the Bell Tolls for the original Gameboy. This game has been tested and works great! 
         It has been tested in original hardware as well as the Retro Freak and works with no problems.", 
     price: 14.49, 
-    category: "Electronics", 
+    category: "electronics", 
     quantity: 1, 
     tags: "video games, electronic, gameboy", 
     shop_id: 3)
@@ -518,7 +518,7 @@ electronics2 = Listing.create!(
         wall and in your car. Screw on/off design keeps your cables accessible and where they need to be. Ideal for use with mobile phone 
         and laptop charge cables, USB cables and power cords.", 
     price: 12.98, 
-    category: "Electronics", 
+    category: "electronics", 
     quantity: 80, 
     tags: "cable organizer, charging, organization, electronic", 
     shop_id: 2)
@@ -538,7 +538,7 @@ electronics3 = Listing.create!(
         -Matching usb cable coil
         -gold bar stabalizers", 
     price: 127.99, 
-    category: "Electronics", 
+    category: "electronics", 
     quantity: 20, 
     tags: "keyboard, computer, accessory, electronics", 
     shop_id: 1)
@@ -551,14 +551,14 @@ electronics4 = Listing.create!(
         MegaGear Mousepad is designed and crafted with the purpose of producing a product that is not only a result of top quality leather 
         craftsmanship but also a convenient and modern accessory that one can rely on.", 
     price: 50.94, 
-    category: "Electronics", 
+    category: "electronics", 
     quantity: 39, 
     tags: "leather, mouse, electronics, gifts", 
     shop_id: 5)
     electronics4.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/electronics-mouse-pad.jpg"), filename: "electronics-mouse-pad.jpg")
 
 electronics5 = Listing.create!(
-    product_name: "c287 MCM Mid Century Stereo Console NEW Modern Electronics Bluetooth, Turntable, SONOS ready, bar, credenza, 
+    product_name: "c287 MCM Mid Century Stereo Console NEW Modern electronics Bluetooth, Turntable, SONOS ready, bar, credenza, 
         tube amp, Warranty, Vintage", 
     description: "Great sounding espresso Grundig, also have a natural blonde same console.
         New turntable and Bluetooth streaming included.
@@ -566,7 +566,7 @@ electronics5 = Listing.create!(
         Sonos integration options
         Set top tube amplifier options", 
     price: 4037.50, 
-    category: "Electronics", 
+    category: "electronics", 
     quantity: 1, 
     tags: "stereo, music, speakers, electronics", 
     shop_id: 4)
@@ -579,14 +579,14 @@ electronics6 = Listing.create!(
         the television screen, the stand gives your watch a classy, retro look. A circular cutout is located in the back to holster 
         the charger, and the apple watch fits snuggly in the slot in the middle.", 
     price: 16.80, 
-    category: "Electronics", 
+    category: "electronics", 
     quantity: 64, 
     tags: "apple watch, charger, gift, 3D print", 
     shop_id: 3)
     electronics6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/electronics-watch-stand.jpg"), filename: "electronics-watch-stand.jpg")
 
 
-# Father's Day Gifts
+# fathers
 fathers1 = Listing.create!(
     product_name: "Dad Jokes Father's Day Card", 
     description: "Silk Screen Printed with water based ink on professional equipment
@@ -595,7 +595,7 @@ fathers1 = Listing.create!(
         Size: Folded A2
         Single Card with one kraft envelope", 
     price: 5.50, 
-    category: "Father's Day Gifts", 
+    category: "fathers", 
     quantity: 500, 
     tags: "card, gift, father", 
     shop_id: 2)
@@ -609,7 +609,7 @@ fathers2 = Listing.create!(
         hardware store. Any LED or standard bulb will also work in any of our lamps socket.
         ✥Lamps parts are made of real steel.", 
     price: 48.60, 
-    category: "Father's Day Gifts", 
+    category: "fathers", 
     quantity: 52, 
     tags: "lamp, desk, gift, fathers", 
     shop_id: 1)
@@ -621,7 +621,7 @@ fathers3 = Listing.create!(
         game at a cheap price! My game is not made by a CNC machine or on an assembly line! Every one of my games are made one at a time, 
         by hand, by me! This 2-player ring toss Bimini game is handcrafted one at a time in my workshop. ", 
     price: 25.66, 
-    category: "Father's Day Gifts", 
+    category: "fathers", 
     quantity: 8, 
     tags: "father, gift, game, toss", 
     shop_id: 5)
@@ -633,7 +633,7 @@ fathers4 = Listing.create!(
     description: "TWELVE FULL OUNCES —That’s 50% larger than your classic kuksa. The Lore boasts a large capacity. Perfectly sized for 
         coffee, trail mix, or your favorite dehydrated backpacking meal.", 
     price: 32.22, 
-    category: "Father's Day Gifts", 
+    category: "fathers", 
     quantity: 36, 
     tags: "fathers, gift, cup, norse", 
     shop_id: 4)
@@ -644,7 +644,7 @@ fathers5 = Listing.create!(
     description: "Made from GOTS certified organic cotton with seamless toes for ultimate comfort. Grips are included on the 1-2, 
         2-4 and 4-6 year sizes.", 
     price: 34.95, 
-    category: "Father's Day Gifts", 
+    category: "fathers", 
     quantity: 63, 
     tags: "socks, fathers, gift, family", 
     shop_id: 3)
@@ -672,11 +672,11 @@ fathers5 = Listing.create!(
 
 # Category.destroy_all
 # ActiveRecord::Base.connection.reset_pk_sequence!('categories')
-# cat1 = Category.create!(category_name: 'Jewelry & Accessories')
-# cat2 = Category.create!(category_name: 'Clothing & Shoes')
-# cat3 = Category.create!(category_name: 'Home & Living')
-# cat4 = Category.create!(category_name: 'Toys & Entertainment')
-# cat5 = Category.create!(category_name: 'Art & Collectibles')
-# cat6 = Category.create!(category_name: 'Super Smash Bros')
-# cat7 = Category.create!(category_name: 'Electronics')
-# cat8 = Category.create!(category_name: "Father's Day Gifts")
+# cat1 = Category.create!(category_name: 'accessories')
+# cat2 = Category.create!(category_name: 'clothing')
+# cat3 = Category.create!(category_name: 'home')
+# cat4 = Category.create!(category_name: 'toys')
+# cat5 = Category.create!(category_name: 'art')
+# cat6 = Category.create!(category_name: 'smash')
+# cat7 = Category.create!(category_name: 'electronics')
+# cat8 = Category.create!(category_name: "fathers")

@@ -1,11 +1,103 @@
+.index-header-container {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.index-header {
+    position: absolute;
+    width: 100vw;
+    background-color: #fddcd8;
+    height: 170px;
+    // z-index: -2;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prof-ul {
+    display: flex;
+    justify-content: space-between;
+    width: min(80%, 100%);
+    position: absolute;
+    bottom: -65px;
+    height: 180px;
+    width: 80%;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 115px;
+        height: 160px;
+        transform: translateY(10px);
+        padding-bottom: 15px;
+    }
+
+    span {
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 20px;
+        z-index: 4;
+        transform: translateY(130px);
+    }
+
+    li:hover span {
+        color: rgb(83, 83, 83);
+    }
+
+    li:hover {
+        border-bottom: black 2px solid;
+    }
+
+    img {
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        box-shadow: 1px;
+        position: absolute;
+        bottom: 40px;
+        transition: 200ms;
+        transform-origin: center;
+    }
+
+    li:hover img{
+        transform: scale(110%);
+    }
+}
+
+
 .index-ul {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 800px;
     margin-top: 30px;
+
     img {
         width: 200px;
         border-radius: 10px;
+        transition: 200ms;
+    }
+
+    img:hover {
+        box-shadow: 0px 0px 10px #9c9c9c;
     }
 }
 
+
+
+// alabaster #d4dccd
+// misty rose #ffe8e1
+// pink #ffc4d1
+// nadeshiko pink #efaac4
+// slate gray #6b717e
