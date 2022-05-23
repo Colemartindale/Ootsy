@@ -257,6 +257,49 @@ home5 = Listing.create!(
     shop_id: 4)
     home5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-table.jpg"), filename: "home-table.jpg" )
 
+home6 = Listing.create!(
+    product_name: "Solid Hardwood Floating Picture Ledge, Floating Shelf, Art Shelf, Display Ledge, Gallery Shelf, Rail, 
+        Picture Shelf, Rustic Wooden Shelf", 
+    description: "-->These beautiful solid hardwood floating ledges add instant elegance to any room.
+        --> Ledges mount through the back using pre-drilled holes and are simple to hang.
+        --> The ledges are assembled with no nails and finished with a simple all natural oil -- no stain, unless customized.", 
+    price: 25.25, 
+    category: "home", 
+    quantity: 18, 
+    tags: "wood, shelves, home, decor", 
+    shop_id: 3)
+    home6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-shelves.jpg"), filename: "home-shelves.jpg" )
+
+home7 = Listing.create!(
+    product_name: "Sloth Air Plant Holder, Small Sloth Planter, Gift for Mom, Small Air Planter, Desk Accessory, Small Gift", 
+    description: 'These little sloth air plant holders (approximately 1.5" tall) come with an air plant (approximately 2-3" tall) 
+        already in his arms and a care instruction card as well. This listing is for ONE (1) sloth air plant.
+        The air plants are between 2" & 3" tall and come with care instructions but please feel free to message with any questions 
+        prior to purchase. They are baby air plants, and they will grow well and fill out if cared for properly.', 
+    price: 27.00, 
+    category: "home", 
+    quantity: 55, 
+    tags: "gift, sloth, desk, plant", 
+    shop_id: 2)
+    home7.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-sloth.jpg"), filename: "home-sloth.jpg" )
+
+home8 = Listing.create!(
+    product_name: "Rug Design Pillow Covers|Terracotta Southwestern Cushion Case|Decorative Aztec Print Ethnic Home Decor|Farmhouse 
+        Style Geometric Pillow Case", 
+    description: 'Imagine these "Rustic Southwestern Pillows" on your sofa/seat to welcome your family and friends!
+        These elegant brick color/terracotta, beige, brown square decorative farmhouse throw pillow covers;
+        • Looks great displayed with other home and bedding decors.
+        • Digital printed one side (the other side is pure light cream) OR both-sided as your wish.
+        • Made of %70 polyester and %30 Cotton fabric which is known as "raschel" a special soft and shiny fabric.
+        • Can be used indoor and outdoor.
+        • Stain-resistant, half water-resistant and wind-resistant.', 
+    price: 13.19, 
+    category: "home", 
+    quantity: 100, 
+    tags: "pillow, home, decor, aztec", 
+    shop_id: 1)
+    home8.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-pillows.jpg"), filename: "home-pillows.jpg" )
+
 
 # toys
 toys1 = Listing.create!(
@@ -650,7 +693,18 @@ fathers5 = Listing.create!(
     shop_id: 3)
     fathers5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-socks.jpg"), filename: "fathers-socks.jpg")
 
-
+fathers6 = Listing.create!(
+    product_name: "The great outdoors camping personalised leather hip flask", 
+    description: "This stainless steel 6 oz hip flask is presented in a tan leather slip engraved with a stylised image of the great 
+        outdoors, pine trees, mountains and a sunset.
+        A great gift for a husband, father or any fan of spending time outside. It's the perfect gift for winding down with at the 
+        end of a long day hiking as you sit and have a drink and watch the sun set.", 
+    price: 48.17, 
+    category: "fathers", 
+    quantity: 20, 
+    tags: "flask, drink, gift, fathers", 
+    shop_id: 3)
+    fathers6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-flask.jpg"), filename: "fathers-flask.jpg" )
 
 
 

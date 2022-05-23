@@ -15,10 +15,16 @@ class ListingIndexHeader extends React.Component {
         if (!this.props.listings || this.props.listings.length < 10) {
             return null
         };
-        const { listings } = this.props
+        const { listings, currentUser } = this.props
+        let welcomeMsg;
+        if (currentUser) {
+            welcomeMsg = `Welcome back, ${currentUser.email}!`
+        } else {
+            welcomeMsg = 'Step into Spring with cheerful finds from small shops.'
+        }
         return (
             <div className="index-header-container">
-                    <span>Welcome Text</span>
+                    <span className="header-welcome">{welcomeMsg}</span>
                 <div className="index-header">
                     <ul className="prof-ul">
                         <li>
@@ -39,7 +45,7 @@ class ListingIndexHeader extends React.Component {
                         </li>
                         <li>
                             <img src={listings[37].photoUrl} alt='smash' onClick={() => this.props.history.push(`/listings/category/smash`)}/>
-                            <span>Smash Bros</span>
+                            <span>Smash</span>
                         </li>
                         <li>
                             <img src={listings[43].photoUrl} alt='electronics' onClick={() => this.props.history.push(`/listings/category/electronics`)}/>

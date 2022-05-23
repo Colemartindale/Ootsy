@@ -16,14 +16,14 @@ class CategoryIndex extends React.Component {
     };
 
     render() {
-        console.log(this.props, 'hey')
+        // console.log(this.props, 'hey')
         if (!this.props.listings) {
             return null
         };
 
         return (
-            <div>
-                {this.props.listings.map(listing => <img src={listing.photoUrl} />)}
+            <div className="cat-container">
+                {this.props.listings.map(listing => <img src={listing.photoUrl} className='img'/>)}
             </div>
         );
     };

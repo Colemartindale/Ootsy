@@ -4,7 +4,10 @@ import ListingIndexHeader from './index_header';
 import { withRouter } from "react-router-dom";
 
 const mSTP = state => {
-    return { listings: Object.values(state.entities.listings) }
+    return { 
+        listings: Object.values(state.entities.listings),
+        currentUser: state.session.currentUser
+    }
 };
 
 const mDTP = dispatch => {
