@@ -16,4 +16,4 @@ const mDTP = dispatch => {
     }
 };
 
-export default withRouter(connect(mSTP, mDTP)(ListingIndexHeader));
+export default withRouter(connect(mSTP, mDTP)(ListingIndexHeader)); 

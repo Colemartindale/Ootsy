@@ -10,7 +10,8 @@ const mSTP = ( state, ownProps ) => {
 
 const mDTP = (dispatch, ownProps) => {
     return {
-        fetchListing: () => dispatch(fetchListing(ownProps.match.params.listingId))
+        fetchListing: () => dispatch(fetchListing(ownProps.match.params.listingId)),
+    
     }
 };
 

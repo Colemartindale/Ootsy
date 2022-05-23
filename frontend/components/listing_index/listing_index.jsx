@@ -33,7 +33,9 @@ class ListingIndex extends React.Component {
                         <span className="cat-link">Shop these unique finds</span>
                         {listings.map((listing) => {
                             if (listing.category === 'home') {
-                                return <img src={listing.photoUrl} alt="home" />
+                                return <img src={listing.photoUrl} 
+                                    alt="home" 
+                                    onClick={() => this.props.history.push(`/listings/${listing.id}`)}/>
                             }
                         })}
                     </ul>
@@ -43,7 +45,8 @@ class ListingIndex extends React.Component {
                             <span className="cat" >Super Smash Bros</span>
                             {listings.map(listing => {
                                 if (listing.category === 'smash') {
-                                    return <img src={listing.photoUrl}/>
+                                    return <img src={listing.photoUrl} 
+                                        onClick={() => this.props.history.push(`/listings/${listing.id}`)}/>
                                 }
                             })}
                         </ul>
@@ -53,7 +56,8 @@ class ListingIndex extends React.Component {
                             <span className="cat">Unique Father's Day Finds</span>
                             {listings.map(listing => {
                                 if (listing.category === 'fathers') {
-                                    return <img src={listing.photoUrl}/>
+                                    return <img src={listing.photoUrl} 
+                                        onClick={() => this.props.history.push(`/listings/${listing.id}`)}/>
                                 }
                             })}
                         </ul>

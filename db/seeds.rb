@@ -10,15 +10,17 @@ require "open-uri"
 
 Listing.destroy_all
 User.destroy_all
+Review.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('listings')
+ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
 
-user1 = User.create(email: 'phil@gmail.com', password: '123456', shop_name: "Phil's Jewels")
-user2 = User.create(email: 'tim@hotmail.com', password: '123456')
-user3 = User.create(email: 'lizzo@gmail.com', password: '123456')
-user4 = User.create(email: 'olive@cox.net', password: '123456')
-user5 = User.create(email: 'ernest@yo.com', password: '123456')
-demo = User.create(email: 'demo-email', password: 'demopw')
+user1 = User.create(email: 'phil@gmail.com', password: '123456', shop_name: "Phil's Fun Factory")
+user2 = User.create(email: 'tim@hotmail.com', password: '123456', shop_name: 'Panda Products')
+user3 = User.create(email: 'lizzo@gmail.com', password: '123456', shop_name: 'Sunny Side Sales')
+user4 = User.create(email: 'olive@cox.net', password: '123456', shop_name: "Paramountain")
+user5 = User.create(email: 'ernest@yo.com', password: '123456', shop_name: "Funky Finds")
+demo = User.create(email: 'demo-email', password: 'demopw', shop_name: "Demo Shop")
 
 # Listing.create!(
 #     product_name: "", 
@@ -705,6 +707,22 @@ fathers6 = Listing.create!(
     tags: "flask, drink, gift, fathers", 
     shop_id: 3)
     fathers6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-flask.jpg"), filename: "fathers-flask.jpg" )
+
+# reviews
+
+review1 = Review.create!(
+    listing_id: 15,
+    user_id: 1,
+    body: "it holds my plants so well I can't even believe it!",
+    rating: 5,
+)
+
+review2 = Review.create!(
+    listing_id: 20,
+    user_id: 4,
+    body: "Wow, this sloth has brought so much joy into my life I can't imagine a world without it.",
+    rating: 5,
+)
 
 
 

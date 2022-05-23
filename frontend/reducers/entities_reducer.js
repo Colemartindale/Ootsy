@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import usersReducer from './users_reducer';
+import UsersReducer from './users_reducer';
 import ListingsReducer from './listings_reducer';
+import ReviewsReducer from './reviews_reducer';
 
 const entitiesReducer = combineReducers({
-    users: usersReducer,
-    listings: ListingsReducer
+    users: UsersReducer,
+    listings: ListingsReducer,
+    reviews: ReviewsReducer
 });
 
 export default entitiesReducer;
