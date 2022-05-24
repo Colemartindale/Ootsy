@@ -84,7 +84,7 @@ jewelry5 = Listing.create!(
         May Birthstone Ring,', 
     description: "This beautiful Emerald Gold Ring was handmade in Melt'm Jewelry Design Studio in California using 14k solid yellow 
         gold band and 6x4mm emerald cut lab grown emerald stone. Emerald is featuring in 14k gold prong setting.", 
-    price: 240.00, 
+    price: 240.99, 
     category: "accessories", 
     quantity: 3, 
     tags: 'ring, gold, jewelry, emerald', 
@@ -135,7 +135,7 @@ clothes4 = Listing.create!(
     description: "Our minimal style of overalls. With a tailored leg and a clean, elegant side profile with the big deep pockets, 
         these overalls will quickly become a favorite - the most easy wearing and comfortable one piece, you’ll reach for them again and 
         again.", 
-    price: 79.00, 
+    price: 79.80, 
     category: "clothing", 
     quantity: 2, 
     tags: "overalss, clothes, womens, yellow", 
@@ -160,7 +160,7 @@ clothes6 = Listing.create!(
     description: "→ Solid color ones like White and Black are 100% Cotton. → Heather Colors are cotton/polyester blend and they are 
         super comfy soft! → Bella-Canvas Unisex Jersey Short Sleeve Crew-Neck Unisex T-Shirt → Soft and High-Quality Fabric, sueded 
         pre-shrunk sueded jersey, taped shoulder-shoulder. → Sueded Jersey → Side Seamed → Retail fit", 
-    price: 11.00, 
+    price: 11.50, 
     category: "clothing", 
     quantity: 56, 
     tags: "shirt, womens, pink, owl", 
@@ -220,7 +220,7 @@ home2 = Listing.create!(
 home3 = Listing.create!(
     product_name: "Best Seller | Large Multilayered 6 Tiers Wooden Plant Rack Stand Flower Pot Shelf Storage European Décor Style 
         Christmas Gifts | ON SALE", 
-    description: "ndoor/ Outdoor Flower Stands: 6 tiers of exhibition space, turn your beautiful garden into a natural plant paradise 
+    description: "Indoor/ Outdoor Flower Stands: 6 tiers of exhibition space, turn your beautiful garden into a natural plant paradise 
         full of space crisscross and rich sense. Succulent plants, Narcissus, cactus, roses, lilies, tulips, daisies and so on, 
         your favorite.", 
     price: 117.17, 
@@ -236,7 +236,7 @@ home4 = Listing.create!(
         ready to use.
         26" Length X 25" Height (from the floor to the bottom) x 10” Depth
         Inner Space : 18.5" x 13" height', 
-    price: 135.50, 
+    price: 135.55, 
     category: "home", 
     quantity: 4, 
     tags: "table, decor, design, wood", 
@@ -252,7 +252,7 @@ home5 = Listing.create!(
         coffee table base, dining table base. All are handmade by me. Inspired by natural forms, our products emphasize curved lines and 
         surfaces instead of straight lines. It is guaranteed that our designer products will give unique character and great joy in your 
         living area wherever it’s displayed.", 
-    price: 1800.80, 
+    price: 1800.89, 
     category: "home", 
     quantity: 2, 
     tags: "table, home, kitchen, decor", 
@@ -278,7 +278,7 @@ home7 = Listing.create!(
         already in his arms and a care instruction card as well. This listing is for ONE (1) sloth air plant.
         The air plants are between 2" & 3" tall and come with care instructions but please feel free to message with any questions 
         prior to purchase. They are baby air plants, and they will grow well and fill out if cared for properly.', 
-    price: 27.00, 
+    price: 27.99, 
     category: "home", 
     quantity: 55, 
     tags: "gift, sloth, desk, plant", 
@@ -364,7 +364,7 @@ toys6 = Listing.create!(
     product_name: "OLD-SCHOOL TRUCK - a natural and eco-friendly wooden toy car made with sustainable hardwood - toddler or preschooler toy", 
     description: "Little ones gotta move, and our old-school wooden toy truck moves right along with them. A tried and true favorite for 
         toddlers, choose an heirloom toy that will last long after childhood. Sturdy, safe, all natural, and drives like a charm!", 
-    price: 16.50, 
+    price: 16.55, 
     category: "toys", 
     quantity: 65, 
     tags: "car, wheels, toy, kids", 
@@ -377,7 +377,7 @@ toys7 = Listing.create!(
     description: "Mountain Spiral Railway is a custom, wood track that connects to standard wooden Thomas and Brio track sets. 
         The track ascends over 18” as it sweeps around two complete revolutions. Once reaching the summit, there is an S-turn where 
         after the track descends back to earth.", 
-    price: 239.50, 
+    price: 239.59, 
     category: "toys", 
     quantity: 12, 
     tags: "trains, kids, toys, wheels", 

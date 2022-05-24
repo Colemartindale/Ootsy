@@ -935,7 +935,7 @@ var ListingIndexHeader = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "prof-ul"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-        src: listings[3].photoUrl,
+        src: listings[4].photoUrl,
         alt: "jewelry",
         onClick: function onClick() {
           return _this.props.history.push("/listings/category/accessories");
@@ -953,13 +953,13 @@ var ListingIndexHeader = /*#__PURE__*/function (_React$Component) {
           return _this.props.history.push("/listings/category/home");
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "Decor")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-        src: listings[24].photoUrl,
+        src: listings[27].photoUrl,
         alt: "toys",
         onClick: function onClick() {
           return _this.props.history.push("/listings/category/toys");
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "Toys")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-        src: listings[37].photoUrl,
+        src: listings[40].photoUrl,
         alt: "smash",
         onClick: function onClick() {
           return _this.props.history.push("/listings/category/smash");
@@ -1197,6 +1197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _star_rating__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./star_rating */ "./frontend/components/listing_show/star_rating.jsx");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.esm.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1222,6 +1223,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var ListingShow = /*#__PURE__*/function (_React$Component) {
   _inherits(ListingShow, _React$Component);
 
@@ -1239,12 +1241,32 @@ var ListingShow = /*#__PURE__*/function (_React$Component) {
       this.props.fetchListing();
     }
   }, {
+    key: "quantityLoop",
+    value: function quantityLoop() {
+      var options = [];
+
+      for (var i = 1; i < this.props.listing.quantity; i++) {
+        options.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+          value: i
+        }, i));
+      }
+
+      ;
+      return options;
+    }
+  }, {
     key: "render",
     value: function render() {
       // console.log(this.props.listing, 'hi')
       var listing = this.props.listing;
 
-      if (!this.props.listing) {
+      if (!listing) {
+        return null;
+      }
+
+      ;
+
+      if (!listing.reviews) {
         return null;
       }
 
@@ -1259,22 +1281,35 @@ var ListingShow = /*#__PURE__*/function (_React$Component) {
         src: listing.photoUrl,
         alt: "img",
         className: "show-img"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "avg-review"
+      }, listing.reviews.length, " ", listing.reviews.length === 1 ? 'review' : 'reviews')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_star_rating__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        className: "star"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "reviews-container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_star_rating__WEBPACK_IMPORTED_MODULE_1__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, listing.reviews.map(function (review) {
+        // console.log(Object.values(review), 'hehehheheheh')
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, Object.values(review)[0].body);
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "details-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "shop-name"
       }, listing.shop_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "product-name"
-      }, listing.product_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      }, listing.product_name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "price-stock-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "price"
-      }, "$", listing.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      }, "$", listing.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+        className: listing.quantity > 3 ? 'green' : 'red'
+      }, listing.quantity > 3 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaCheck, null) : "", " ", listing.quantity > 3 ? "in stock" : "only ".concat(listing.quantity, " left"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "quantity-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
         name: "quantity",
         id: "quantity-select"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Add to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      }, this.quantityLoop().map(function (option) {
+        return option;
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", null, "Add to Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
         className: "description"
       }, "Description:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), listing.description)));
     }

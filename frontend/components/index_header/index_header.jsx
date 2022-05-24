@@ -28,7 +28,7 @@ class ListingIndexHeader extends React.Component {
                 <div className="index-header">
                     <ul className="prof-ul">
                         <li>
-                            <img src={listings[3].photoUrl} alt='jewelry' onClick={() => this.props.history.push(`/listings/category/accessories`)}/>
+                            <img src={listings[4].photoUrl} alt='jewelry' onClick={() => this.props.history.push(`/listings/category/accessories`)}/>
                             <span>Jewelry</span>
                         </li>
                         <li>
@@ -40,11 +40,11 @@ class ListingIndexHeader extends React.Component {
                             <span>Decor</span>
                         </li>
                         <li>
-                            <img src={listings[24].photoUrl} alt='toys' onClick={() => this.props.history.push(`/listings/category/toys`)}/>
+                            <img src={listings[27].photoUrl} alt='toys' onClick={() => this.props.history.push(`/listings/category/toys`)}/>
                             <span>Toys</span>
                         </li>
                         <li>
-                            <img src={listings[37].photoUrl} alt='smash' onClick={() => this.props.history.push(`/listings/category/smash`)}/>
+                            <img src={listings[40].photoUrl} alt='smash' onClick={() => this.props.history.push(`/listings/category/smash`)}/>
                             <span>Smash</span>
                         </li>
                         <li>

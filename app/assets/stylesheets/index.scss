@@ -70,6 +70,7 @@
         bottom: 40px;
         transition: 200ms;
         transform-origin: center;
+        cursor: pointer;
     }
 
     li:hover img{
@@ -135,6 +136,7 @@
         
         img:hover {
             box-shadow: 0px 0px 10px #9c9c9c;
+            cursor: pointer;
         }
 
         span {
@@ -161,6 +163,12 @@
             img {
                 width: 250px;
                 border-radius: 10px;
+                cursor: pointer;
+            }
+
+            img:hover {
+                box-shadow: 0px 0px 10px #9c9c9c;
+                cursor: pointer;
             }
     }
 }
@@ -183,6 +191,12 @@
             img {
                 width: 250px;
                 border-radius: 10px;
+                cursor: pointer;
+            }
+            
+            img:hover {
+                box-shadow: 0px 0px 10px #9c9c9c;
+                cursor: pointer;
             }
     }
 }
