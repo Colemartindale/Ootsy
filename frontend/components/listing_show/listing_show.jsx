@@ -42,7 +42,7 @@ class ListingShow extends React.Component {
                             {reviews.length} {(reviews.length === 1) ? 'review' : 'reviews'}
                         </div>
                     </div>
-                    <StarRating className='star'/>
+                    {/* <StarRating className='star'/> */}
                     <ul className="reviews-container">
                         <li>
                             {reviews.map(review => {

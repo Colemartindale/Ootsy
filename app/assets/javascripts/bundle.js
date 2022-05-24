@@ -1286,9 +1286,7 @@ var ListingShow = /*#__PURE__*/function (_React$Component) {
         className: "show-img"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         className: "avg-review"
-      }, reviews.length, " ", reviews.length === 1 ? 'review' : 'reviews')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_star_rating__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        className: "star"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+      }, reviews.length, " ", reviews.length === 1 ? 'review' : 'reviews')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
         className: "reviews-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, reviews.map(function (review) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
