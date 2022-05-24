@@ -15,12 +15,12 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('listings')
 ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
 
-user1 = User.create(email: 'phil@gmail.com', password: '123456', shop_name: "Phil's Fun Factory")
-user2 = User.create(email: 'tim@hotmail.com', password: '123456', shop_name: 'Panda Products')
-user3 = User.create(email: 'lizzo@gmail.com', password: '123456', shop_name: 'Sunny Side Sales')
-user4 = User.create(email: 'olive@cox.net', password: '123456', shop_name: "Paramountain")
-user5 = User.create(email: 'ernest@yo.com', password: '123456', shop_name: "Funky Finds")
-demo = User.create(email: 'demo-email', password: 'demopw', shop_name: "Demo Shop")
+user1 = User.create(username: 'Phil Anthropist', password: '123456', shop_name: "Phil's Fun Factory")
+user2 = User.create(username: 'Marie Gregson', password: '123456', shop_name: 'Panda Products')
+user3 = User.create(username: 'Diana Musolf', password: '123456', shop_name: 'Sunny Side Sales')
+user4 = User.create(username: 'Brian Bui', password: ';ifuhfpqurhf895ht9h;jh;uh77777', shop_name: "Spi's Stuff")
+user5 = User.create(username: 'Ernesto Montoya', password: '123456', shop_name: "Funky Finds")
+demo = User.create(username: 'demo user', password: 'demopw', shop_name: "Demo Shop")
 
 # Listing.create!(
 #     product_name: "", 
@@ -718,6 +718,15 @@ review1 = Review.create!(
 )
 
 review2 = Review.create!(
+    listing_id: 15,
+    user_id: 2,
+    body: "This life changing product needs to be in everyone's home. The natural wood is stained beautifully
+        and the sturdyness of the structure is impenetrable. I highly recommend you prchase one 
+        right this instant. Please.",
+    rating: 5,
+)
+
+review3 = Review.create!(
     listing_id: 20,
     user_id: 4,
     body: "Wow, this sloth has brought so much joy into my life I can't imagine a world without it.",

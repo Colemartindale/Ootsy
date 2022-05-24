@@ -5,10 +5,11 @@ const ListingsReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_ALL_LISTINGS:
-            // console.log(action)
             return Object.assign({}, action.listings);
         case RECEIVE_LISTING:
-            return Object.assign({}, oldState, {[action.listing.id]: action.listing})
+            let newState = Object.assign({}, oldState, {[action.listing.id]: Object.assign({}, action.listing)})
+            delete newState[action.listing.id]['reviews']
+            return newState;
         default:
             return oldState;
     };

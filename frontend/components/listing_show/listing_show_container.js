@@ -4,7 +4,8 @@ import ListingShow from "./listing_show";
 
 const mSTP = ( state, ownProps ) => {
     return { 
-        listing: state.entities.listings[ownProps.match.params.listingId]
+        listing: state.entities.listings[ownProps.match.params.listingId],
+        reviews: Object.values(state.entities.reviews)
     }
 };
 

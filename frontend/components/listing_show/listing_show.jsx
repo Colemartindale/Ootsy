@@ -1,6 +1,8 @@
 import React from "react";
 import StarRating from "./star_rating";
 import { FaCheck } from 'react-icons/fa';
+import {CgProfile} from 'react-icons/cg';
+import ReviewStarRating from "./review_star_rating";
 
 class ListingShow extends React.Component {
     constructor(props) {
@@ -21,15 +23,15 @@ class ListingShow extends React.Component {
 
     render() {
         // console.log(this.props.listing, 'hi')
-        const { listing } = this.props;
+        const { listing, reviews } = this.props;
 
         if (!listing) {
             return null
         };
 
-        if (!listing.reviews) {
-            return null
-        };
+        // if (!reviews) {
+        //     return null
+        // };
 
         return(
             <div className="show-container">
@@ -37,15 +39,26 @@ class ListingShow extends React.Component {
                     <div className="img-container">
                         <img src={listing.photoUrl} alt="img" className="show-img" />
                         <div className="avg-review">
-                            {listing.reviews.length} {(listing.reviews.length === 1) ? 'review' : 'reviews'}
+                            {reviews.length} {(reviews.length === 1) ? 'review' : 'reviews'}
                         </div>
                     </div>
                     <StarRating className='star'/>
                     <ul className="reviews-container">
-                        {listing.reviews.map(review => {
-                            // console.log(Object.values(review), 'hehehheheheh')
-                            return <li>{Object.values(review)[0].body}</li>    
-                        })}
+                        <li>
+                            {reviews.map(review => {
+                                return (
+                                    <div className="review-container">
+                                        <CgProfile size={30} className="prof-pic"/>
+                                        <div className="review-content">
+                                            <span className="name">{review.authorName}</span>
+                                            <span className="date">{review.createdAt}</span>
+                                            <ReviewStarRating className="stars" rating={review.rating}/>
+                                            <p className="review">{review.body}</p>    
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </li>
                     </ul>
                 </div>
                 <div className="details-container">
@@ -65,10 +78,16 @@ class ListingShow extends React.Component {
                         </select>
                     </div>
                     <button>Add to Cart</button>
+                    <div>
+                        other people want this
+                    </div>
+                    <div>
+                        Hooray this item ships free
+                    </div>
                     <span className='description'>Description:
                         <br />
                         <br />
-                        {listing.description}
+                        <p>{listing.description}</p>
                     </span>
                 </div>
             </div>

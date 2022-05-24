@@ -9,4 +9,7 @@ class Review < ApplicationRecord
         foreign_key: :user_id,
         class_name: :User
 
+    def created_at
+        attributes['created_at'].strftime("%m/%d/%Y")
+    end
 end

@@ -1,8 +1,14 @@
 json.extract! @listing, :id, :product_name, :description, :price, :category, :quantity, :tags
 json.shop_name @listing.shop.shop_name
-json.reviews @listing.reviews.each do |review|
-    json.set! review.id do
-        json.extract! review, :listing_id, :rating, :id, :user_id, :body
+json.reviews do 
+    @listing.reviews.each do |review|
+        json.set! review.id do
+            json.extract! review, :rating, :id, :body
+            json.listingId review.listing_id
+            json.userId review.user_id
+            json.createdAt review.created_at
+            json.authorName review.user.username 
+        end
     end
 end
 if @listing.photo.attached?
