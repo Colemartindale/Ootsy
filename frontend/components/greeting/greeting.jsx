@@ -42,7 +42,7 @@ class Greeting extends React.Component {
         <div className='dropdown-content'>
           <div className='email-container'>
             <img src={window.profilePicLogo} className='profile-logo' />
-            <span>{this.props.currentUser.email}</span>
+            <span>{this.props.currentUser.username}</span>
           </div>
           <div className='orders-container'>
             <img src={window.ordersIcon} className='orders-icon' />

@@ -18,7 +18,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
 user1 = User.create(username: 'Phil Anthropist', password: '123456', shop_name: "Phil's Fun Factory")
 user2 = User.create(username: 'Marie Gregson', password: '123456', shop_name: 'Panda Products')
 user3 = User.create(username: 'Diana Musolf', password: '123456', shop_name: 'Sunny Side Sales')
-user4 = User.create(username: 'Brian Bui', password: ';ifuhfpqurhf895ht9h;jh;uh77777', shop_name: "Spi's Stuff")
+user4 = User.create(username: 'Brian Bui', password: '777777', shop_name: "Spi's Stuff")
 user5 = User.create(username: 'Ernesto Montoya', password: '123456', shop_name: "Funky Finds")
 demo = User.create(username: 'demo user', password: 'demopw', shop_name: "Demo Shop")
 
@@ -482,7 +482,7 @@ smash3 = Listing.create!(
         fighting fighter crossover", 
     description: "This is a working cartridge of the smash. videogame for the Nintendo 64 video game console. 
         (Comes with the cartridge only! There is no product box, manuals, etc.)", 
-    price: 18.50, 
+    price: 18.55, 
     category: "smash", 
     quantity: 1, 
     tags: "smash bros, nintendo, video games, fun", 

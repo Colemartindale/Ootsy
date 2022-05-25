@@ -5,7 +5,7 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
+      username: '',
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
 
   signInDemo(e) {
     e.preventDefault();
-    const user = {email: 'demo-email', password: 'demopw'}
+    const user = {username: 'demo user', password: 'demopw'}
     this.props.processForm(user).then(this.props.closeModal);
   };
 
@@ -67,10 +67,10 @@ class SessionForm extends React.Component {
           <div onClick={this.props.closeModal} className="close-x">X</div>
           <div className="login-form">
             <br/>
-            <label> <span className='input-title'>Email address</span> 
+            <label> <span className='input-title'>Username</span> 
               <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
+                value={this.state.username}
+                onChange={this.update('username')}
                 className={errorOcc}
               />
             </label>

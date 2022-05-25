@@ -1,34 +1,45 @@
 import React, { useState } from "react";
 import { FaStar } from 'react-icons/fa'
 
-const StarRating = () => {
-    const [rating, setRating] = useState(null);
-    const [hover, setHover] = useState(null);
-    return (
-        <div>
-            {[...Array(5)].map((star, i) => {
-                const ratingValue = i + 1;
+class StarRating extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {rating: null, hover: null};
+        this.changeRating = this.changeRating.bind(this);
+    }
 
-                return (
-                    <label>
-                        <input 
-                            type="radio" 
-                            name="rating" 
-                            value={ratingValue}
-                            onClick={() => (setRating(ratingValue))}
+    changeRating(ratingValue) {
+        this.setState({rating: ratingValue})
+        this.props.updateStars(ratingValue)
+    }
+    
+    render() {
+        return (
+            <div>
+                {[...Array(5)].map((star, i) => {
+                    const ratingValue = i + 1;
+    
+                    return (
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="rating" 
+                                value={ratingValue}
+                                onClick={() => (this.changeRating(ratingValue))}
+                                />
+                            <FaStar 
+                                className="star"
+                                color={ratingValue <= (this.state.hover || this.state.rating) ? "#000000" : "#dedede" }
+                                onMouseEnter={() => this.setState({hover: ratingValue})}
+                                onMouseLeave={() => this.setState({hover: null})}                              
+                                size={28}
                             />
-                        <FaStar 
-                            className="star"
-                            color={ratingValue <= (hover || rating) ? "#000000" : "#dedede" }
-                            onMouseEnter={() => setHover(ratingValue)}
-                            onMouseLeave={() => setHover(null)}
-                            
-                        />
-                    </label>
-                )
-            })}
-        </div>
-    );
+                        </label>
+                    )
+                })}
+            </div>
+        );
+    }
 }
 
 export default StarRating;

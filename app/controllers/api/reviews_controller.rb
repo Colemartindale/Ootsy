@@ -4,7 +4,7 @@ class Api::ReviewsController < ApplicationController
          @review = Review.new(review_params)
          if @review.save
             @listing = @review.listing
-            render "api/listings/show"
+            render :show
          else
             render json: "Unable to create review", status: 422
          end
@@ -14,7 +14,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.find_by(id: params[:id])
         if @review.update(review_params)
             @listing = @review.listing
-            render "api/listings/show"
+            render :show
         else
             render json: @review.errors.full_messages, status: 422
         end

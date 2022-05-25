@@ -14,10 +14,4 @@ class Api::ListingsController < ApplicationController
         render :show
     end
 
-    
-
-    # private
-    # def listings_params
-    #     params.require(:listing).permit(:email, :password)
-    # end
 end

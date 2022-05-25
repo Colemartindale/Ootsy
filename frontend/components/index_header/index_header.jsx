@@ -18,7 +18,7 @@ class ListingIndexHeader extends React.Component {
         const { listings, currentUser } = this.props
         let welcomeMsg;
         if (currentUser) {
-            welcomeMsg = `Welcome back, ${currentUser.email}!`
+            welcomeMsg = `Welcome back, ${currentUser.username}!`
         } else {
             welcomeMsg = 'Step into Spring with cheerful finds from small shops.'
         }

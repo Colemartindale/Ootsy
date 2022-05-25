@@ -1,8 +1,9 @@
 import React from "react";
 import StarRating from "./star_rating";
-import { FaCheck } from 'react-icons/fa';
+import { FaCheck, FaShippingFast, FaCartPlus } from 'react-icons/fa';
 import {CgProfile} from 'react-icons/cg';
 import ReviewStarRating from "./review_star_rating";
+import CreateReviewFormContainer from '../review_form/create_review_container';
 
 class ListingShow extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ListingShow extends React.Component {
 
     quantityLoop() {
         let options = [];
-        for (let i = 1; i < this.props.listing.quantity; i++) {
+        for (let i = 1; i <= this.props.listing.quantity; i++) {
             options.push(<option value={i}>{i}</option>) 
         };
         return options;
@@ -29,9 +30,12 @@ class ListingShow extends React.Component {
             return null
         };
 
-        // if (!reviews) {
-        //     return null
-        // };
+       let avgReview = 0;
+       reviews.forEach(review => {
+           avgReview += review.rating
+       });
+       let avgReviewRating = Math.floor(avgReview / reviews.length)
+    //    console.log(avgReview, 'ervurluerliauegfliu')
 
         return(
             <div className="show-container">
@@ -39,16 +43,20 @@ class ListingShow extends React.Component {
                     <div className="img-container">
                         <img src={listing.photoUrl} alt="img" className="show-img" />
                         <div className="avg-review">
-                            {reviews.length} {(reviews.length === 1) ? 'review' : 'reviews'}
+                            {reviews.length}{" "}
+                            {(reviews.length === 1) ? 'review' : 'reviews'}
+                            <span><ReviewStarRating rating={avgReviewRating} /></span>
                         </div>
                     </div>
-                    {/* <StarRating className='star'/> */}
+                    <div className="form-container">
+                        <CreateReviewFormContainer />
+                    </div>
                     <ul className="reviews-container">
-                        <li>
+                        <li className="review-li">
                             {reviews.map(review => {
                                 return (
                                     <div className="review-container">
-                                        <CgProfile size={30} className="prof-pic"/>
+                                        <CgProfile color={(review.id % 2 === 0) ? 'cadetblue' : 'lightcoral'} size={30} className="prof-pic"/>
                                         <div className="review-content">
                                             <span className="name">{review.authorName}</span>
                                             <span className="date">{review.createdAt}</span>
@@ -67,7 +75,9 @@ class ListingShow extends React.Component {
                     <div className="price-stock-container">
                         <span className="price">${listing.price}</span>
                         <span className={ (listing.quantity > 3) ? 'green' : 'red'}>
-                            {(listing.quantity > 3) ? <FaCheck/> : ""}{" "}{(listing.quantity > 3) ? `in stock` : `only ${listing.quantity} left` }
+                            {(listing.quantity > 3) ? <FaCheck/> : ""}
+                            {" "}
+                            {(listing.quantity > 3) ? `in stock` : `only ${listing.quantity} left` }
                         </span>
                     </div>
                     <div className="quantity-container">
@@ -78,11 +88,19 @@ class ListingShow extends React.Component {
                         </select>
                     </div>
                     <button>Add to Cart</button>
-                    <div>
-                        other people want this
+                    <div className="want-this">
+                        <FaCartPlus size={40}/>
+                        <p>Other people want this. 
+                            <span>{" "}{Math.floor(Math.random() * 8 + 4)}{" "} 
+                                {"people have this in their carts right now."}
+                            </span>
+                        </p> 
                     </div>
-                    <div>
-                        Hooray this item ships free
+                    <div className="ships-fast">
+                        <FaShippingFast size={40}/>
+                        <p>Hooray!{" "}
+                            <span>This item ships free.</span>
+                        </p>
                     </div>
                     <span className='description'>Description:
                         <br />

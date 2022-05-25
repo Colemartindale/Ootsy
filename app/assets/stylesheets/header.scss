@@ -313,7 +313,6 @@
     align-items: center;
     width: min(100vw, 1350px);
     height: 27px;
-    // padding-bottom: 12px;
 
     li {
         height: 100%;
@@ -322,7 +321,7 @@
 
     li:hover {
         border-bottom: 3px solid black;
-
+        cursor: pointer;
     }
 
     li:first-of-type {
