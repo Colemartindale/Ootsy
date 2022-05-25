@@ -6,7 +6,7 @@ class Api::ReviewsController < ApplicationController
             @listing = @review.listing
             render :show
          else
-            render json: "Unable to create review", status: 422
+            render json: @review.errors.full_messages, status: 422
          end
     end
 
@@ -25,8 +25,13 @@ class Api::ReviewsController < ApplicationController
         if @review
             @review.destroy
         else
-            render json: "Unable to delete review", status: 422
+            render json: ["Unable to delete review"], status: 422
         end
+    end
+
+    def show
+        @review = Review.find_by(id: params[:id])
+        render :show
     end
 
     private

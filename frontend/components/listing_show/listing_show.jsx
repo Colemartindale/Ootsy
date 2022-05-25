@@ -1,5 +1,4 @@
 import React from "react";
-import StarRating from "./star_rating";
 import { FaCheck, FaShippingFast, FaCartPlus } from 'react-icons/fa';
 import {CgProfile} from 'react-icons/cg';
 import ReviewStarRating from "./review_star_rating";
@@ -11,8 +10,9 @@ class ListingShow extends React.Component {
     };
 
     componentDidMount() {
-        this.props.fetchListing()
-    }
+        this.props.fetchListing();
+        this.props.resetErrors();
+    };
 
     quantityLoop() {
         let options = [];
@@ -20,6 +20,19 @@ class ListingShow extends React.Component {
             options.push(<option value={i}>{i}</option>) 
         };
         return options;
+    };
+
+    buttonShow(userId, review) {
+        if ((this.props.currentUser) && (userId === this.props.currentUser.id)) {
+            return (
+                <span className="edit-delete">
+                    <button className="delete" onClick={() => this.props.deleteReview(review.id)}>
+                        delete
+                    </button>
+                    <button className="edit" onClick={() => this.props.openModal('edit', review.id)}>edit</button>
+                </span>
+            )
+        };
     };
 
     render() {
@@ -35,7 +48,6 @@ class ListingShow extends React.Component {
            avgReview += review.rating
        });
        let avgReviewRating = Math.floor(avgReview / reviews.length)
-    //    console.log(avgReview, 'ervurluerliauegfliu')
 
         return(
             <div className="show-container">
@@ -49,17 +61,22 @@ class ListingShow extends React.Component {
                         </div>
                     </div>
                     <div className="form-container">
-                        <CreateReviewFormContainer />
+                        <CreateReviewFormContainer/>
                     </div>
-                    <ul className="reviews-container">
+                    <ul className="reviews-container" 
+                        style={(reviews.length > 4) ? {height: 500, overflowY: 'scroll'} : {height: 250}}
+                    >
                         <li className="review-li">
                             {reviews.map(review => {
                                 return (
                                     <div className="review-container">
-                                        <CgProfile color={(review.id % 2 === 0) ? 'cadetblue' : 'lightcoral'} size={30} className="prof-pic"/>
+                                        <CgProfile 
+                                            color={(review.id % 2 === 0) ? 'cadetblue' : 'lightcoral'} size={30} className="prof-pic"
+                                        />
                                         <div className="review-content">
                                             <span className="name">{review.authorName}</span>
                                             <span className="date">{review.createdAt}</span>
+                                            {this.buttonShow(review.userId, review)}
                                             <ReviewStarRating className="stars" rating={review.rating}/>
                                             <p className="review">{review.body}</p>    
                                         </div>

@@ -6,14 +6,21 @@ class StarRating extends React.Component {
         super(props);
         this.state = {rating: null, hover: null};
         this.changeRating = this.changeRating.bind(this);
-    }
+    };
 
     changeRating(ratingValue) {
-        this.setState({rating: ratingValue})
-        this.props.updateStars(ratingValue)
-    }
+        this.setState({rating: ratingValue});
+        this.props.updateStars(ratingValue);
+    };
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.currentRating !== this.props.currentRating) {
+            this.setState({rating: this.props.currentRating});
+        };
+    };
     
     render() {
+        console.log(this.state)
         return (
             <div>
                 {[...Array(5)].map((star, i) => {

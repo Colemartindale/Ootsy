@@ -63,35 +63,37 @@ class ListingIndex extends React.Component {
                         </ul>
                 </div>
                 <div className="what-is-ootsy">
-                            <span className="grid1">What is Ootsy?</span>
-                            <p className="grid2">
-                                A community doing good
-                                <br />
-                                <span>
-                                    Ootsy is a global online marketplace, where people come together 
-                                    to make, sell, buy, and collect unique items. We’re also a 
-                                    community pushing for positive change for small businesses, 
-                                    people, and the planet. 
-                                </span>
-                            </p>
-                            <p className="grid3">
-                                Support independent creators
-                                <span>
-                                    There’s no Etsy warehouse – just millions of people selling the 
-                                    things they love. We make the whole process easy, helping you connect 
-                                    directly with makers to find something extraordinary.
-                                </span>
-                            </p>
-                            <p className="grid4">
-                                Peace of mind
-                                <br />
-                                <span>
-                                    Your privacy is the highest priority of our dedicated team. And if you 
-                                    ever need assistance, we are always ready to step in for support.
-                                </span>
-                            </p>
-                            <span className="grid5">Have a question? Well, we’ve got some answers.</span>
-                            <button className="grid6">Go to Help Center</button>
+                    <span className="grid1">What is Ootsy?</span>
+                    <p className="grid2">
+                        A community doing good
+                        <br />
+                        <span>
+                            Ootsy is a global online marketplace, where people come together 
+                            to make, sell, buy, and collect unique items. We’re also a 
+                            community pushing for positive change for small businesses, 
+                            people, and the planet. 
+                        </span>
+                    </p>
+                    <p className="grid3">
+                        Support independent creators
+                        <span>
+                            There’s no Etsy warehouse – just millions of people selling the 
+                            things they love. We make the whole process easy, helping you connect 
+                            directly with makers to find something extraordinary.
+                        </span>
+                    </p>
+                    <p className="grid4">
+                        Peace of mind
+                        <br />
+                        <span>
+                            Your privacy is the highest priority of our dedicated team. And if you 
+                            ever need assistance, we are always ready to step in for support.
+                        </span>
+                    </p>
+                </div>
+                <div className="questions">
+                    <span className="grid1">Have a question? Well, we’ve got some answers.</span>
+                    <button className="grid2">Go to Help Center</button>
                 </div>
             </div>
         )
