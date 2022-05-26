@@ -243,34 +243,35 @@ home4 = Listing.create!(
     shop_id: 5)
     home4.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-side-table.jpg"), filename: "home-side-table.jpg" )
 
-home5 = Listing.create!(
-    product_name: '307 Tulipe Table Base (H28")| Handmade Metal Pedestal | Desk Pedestal, Dining & Kitchen Pedestal, Furniture Base | 
-        FLOWYLINE DESIGN', 
-    description: "You can find and buy Flowyline Design products such as handmade metal table legs & bench legs, metal desk legs, 
-        coffee table legs, dining table legs, river table legs, console table legs, iron table legs, steel table legs, or any furniture 
-        legs for your live edge slab table, round dining table, etc. Also, you can check and buy a metal table base, pedestal table base, 
-        coffee table base, dining table base. All are handmade by me. Inspired by natural forms, our products emphasize curved lines and 
-        surfaces instead of straight lines. It is guaranteed that our designer products will give unique character and great joy in your 
-        living area wherever it’s displayed.", 
-    price: 1800.89, 
-    category: "home", 
-    quantity: 2, 
-    tags: "table, home, kitchen, decor", 
-    shop_id: 4)
-    home5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-table.jpg"), filename: "home-table.jpg" )
-
-home6 = Listing.create!(
-    product_name: "Solid Hardwood Floating Picture Ledge, Floating Shelf, Art Shelf, Display Ledge, Gallery Shelf, Rail, 
+    
+    home5 = Listing.create!(
+        product_name: "Solid Hardwood Floating Picture Ledge, Floating Shelf, Art Shelf, Display Ledge, Gallery Shelf, Rail, 
         Picture Shelf, Rustic Wooden Shelf", 
-    description: "-->These beautiful solid hardwood floating ledges add instant elegance to any room.
+        description: "-->These beautiful solid hardwood floating ledges add instant elegance to any room.
         --> Ledges mount through the back using pre-drilled holes and are simple to hang.
         --> The ledges are assembled with no nails and finished with a simple all natural oil -- no stain, unless customized.", 
-    price: 25.25, 
-    category: "home", 
-    quantity: 18, 
-    tags: "wood, shelves, home, decor", 
-    shop_id: 3)
-    home6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-shelves.jpg"), filename: "home-shelves.jpg" )
+        price: 25.25, 
+        category: "home", 
+        quantity: 18, 
+        tags: "wood, shelves, home, decor", 
+        shop_id: 3)
+        home5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-shelves.jpg"), filename: "home-shelves.jpg" )
+        
+        home6 = Listing.create!(
+            product_name: '307 Tulipe Table Base (H28")| Handmade Metal Pedestal | Desk Pedestal, Dining & Kitchen Pedestal, Furniture Base | 
+                FLOWYLINE DESIGN', 
+            description: "You can find and buy Flowyline Design products such as handmade metal table legs & bench legs, metal desk legs, 
+                coffee table legs, dining table legs, river table legs, console table legs, iron table legs, steel table legs, or any furniture 
+                legs for your live edge slab table, round dining table, etc. Also, you can check and buy a metal table base, pedestal table base, 
+                coffee table base, dining table base. All are handmade by me. Inspired by natural forms, our products emphasize curved lines and 
+                surfaces instead of straight lines. It is guaranteed that our designer products will give unique character and great joy in your 
+                living area wherever it’s displayed.", 
+            price: 1800.89, 
+            category: "home", 
+            quantity: 2, 
+            tags: "table, home, kitchen, decor", 
+            shop_id: 4)
+            home6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/home-table.jpg"), filename: "home-table.jpg" )
 
 home7 = Listing.create!(
     product_name: "Sloth Air Plant Holder, Small Sloth Planter, Gift for Mom, Small Air Planter, Desk Accessory, Small Gift", 
@@ -517,20 +518,9 @@ smash5 = Listing.create!(
     shop_id: 1)
     smash5.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-pin.jpg"), filename: "smash-pin.jpg")
 
-smash6 = Listing.create!(
-    product_name: "Super SSBU Characters, Unframed Plastic Print, Smash Original Concept Art, High-Quality Digital Ink, 
-        Gamer Decor Gifts Mario Friends", 
-    description: "Great gift for the biggest gamer fan in your life!
-        These posters are printed on durable plastic and will be shipped in a flat box. 
-        Made in the USA!", 
-    price: 19.99, 
-    category: "smash", 
-    quantity: 39, 
-    tags: "smash bros, video games, nintendo, poster", 
-    shop_id: 5)
-    smash6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-poster.jpg"), filename: "smash-poster.jpg")
 
-smash7 = Listing.create!(
+
+smash6 = Listing.create!(
     product_name: "Mario smash Symbol Vinyl Graphic Decal Bumper Sticker Car Truck Laptop - Many color and size options!", 
     description: "A custom made-to-order vinyl decal. A great addition to any Mario enthusiast's collection. All orders are free 
         shipping! All vinyl cuts come with transfer paper pre-applied. All transfer paper is rubbed on fabric before application to the 
@@ -540,7 +530,7 @@ smash7 = Listing.create!(
     quantity: 200, 
     tags: "sticker, smash bros, gift, video games", 
     shop_id: 4)
-    smash7.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-prof.jpg"), filename: "smash-prof.jpg")
+    smash6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/smash-prof.jpg"), filename: "smash-prof.jpg")
 
 
 # electronics
@@ -707,6 +697,21 @@ fathers6 = Listing.create!(
     tags: "flask, drink, gift, fathers", 
     shop_id: 3)
     fathers6.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-flask.jpg"), filename: "fathers-flask.jpg" )
+
+fathers7 = Listing.create!(
+    product_name: "Unbeetable Funny Fathers Day Card for Dad - Pop Culture Father's Day Gift
+         - Funny Dad Birthday Card - From Daughter From Son", 
+    description: "-Responsibly printed in Canada on premium ecofriendly cardstock
+        -Includes thick envelope made from 70% post consume content
+        -Measures 4.25 x 5.5 inches
+        -Blank inside
+        -Ships in protective mailer", 
+    price: 7.12, 
+    category: "fathers", 
+    quantity: 80, 
+    tags: "card, office, gift, fathers", 
+    shop_id: 2)
+    fathers7.photo.attach(io: open("https://ootsy-seed.s3.us-west-1.amazonaws.com/fathers-beet.jpg"), filename: "fathers-beet.jpg" )
 
 # reviews
 

@@ -108,19 +108,71 @@
         display: flex;
         justify-content: center;
         margin: auto;
+
+        ul > div {
+            position: relative;
+
+            .price {
+                position: absolute;
+                background-color: #d4e9d7;
+                bottom: 10px;
+                left: 10px;
+                padding: 5px 8px 5px 8px;
+                border-radius: 15px;
+                font-size: 13px;
+                justify-self: center;
+                align-self: center;
+                cursor: pointer;
+
+                .ship {
+                    transform: translateY(2px);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        
+
         ul {
             display: grid;
             justify-content: center;
             grid-template-columns: repeat(4, 250px);
-            grid-auto-rows: auto;
+            grid-template-rows:  auto 30px 250px 50px 250px;
             grid-gap: 20px;
+            font-family: sans-serif;
+            grid-template-areas: 
+                "cat cat cat cat"
+                "catlink catlink catlink catlink"
+                "pic0 pic1 pic2 pic3"
+                "pic0 pic5 pic2 pic7"
+                "pic4 pic5 pic6 pic7";
+            box-sizing: border-box;
+            margin-bottom: 10%;
 
             .cat {
                 grid-column: span 4;
+                font-size: 28px;
             }
             
             .cat-link {
                 grid-column: span 4;
+                font-weight: 200;
+                align-self: center;
+                text-decoration: none;
+                color: black;
+                width: 20%;
+                
+                .arrow {
+                    margin-left: 10px;
+                    transition: all 200ms ease-out;
+                    transform: translateY(3px);
+                }
+            }
+
+            .cat-link:hover {
+                .arrow {
+                    margin-left: 20px;
+                }
             }
 
             li {
@@ -130,8 +182,10 @@
         }
 
         img {
-            width: 250px;
+            width: 100%;
+            height: 100%;
             border-radius: 10px;
+            justify-self: center;
         }
         
         img:hover {
@@ -139,11 +193,55 @@
             cursor: pointer;
         }
 
-        span {
-            // position: absolute;
+        .pic0 {
+            grid-area: pic4;
+            object-fit: cover;
+        }
+        
+        .pic1 {
+            grid-area: pic5;
+            object-fit: cover;
+        }
+        
+        .pic2 {
+            grid-area: pic2;
+            object-fit: cover;
+            height: 300px;
+            max-width: 100%;
+        }
+        
+        .pic3 {
+            object-fit: cover;
+            grid-area: pic7;
+        }
+        
+        .pic4 {
+            object-fit: cover;
+            grid-area: pic0;
+        }
+        
+        .pic5 {
+            object-fit: cover;
+            grid-area: pic3;
+            height: 250px;
+            max-width: 100%;
+        }
+        
+        .pic6 {
+            height: 250px;
+            max-width: 100%;
+            object-fit: cover;
+            grid-area: pic6;
+        }
+        
+        .pic7 {
+            object-fit: cover;
+            grid-area: pic1;
         }
     }
 }
+
+
 
 .smash-section {
     display: flex;
@@ -151,25 +249,35 @@
 
     ul {
         display: grid;
-            justify-content: center;
-            grid-template-columns: repeat(4, 250px);
-            grid-auto-rows: auto;
-            grid-gap: 20px;
+        justify-content: center;
+        grid-template-columns: repeat(4, 250px);
+        grid-auto-rows: 250px 250px;
+        grid-gap: 20px;
+        margin-bottom: 10%;
+        
+        > div {
+            max-height: 100%;
+            width: 250px;
+        }
+        
+        img {
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
 
-            .cat {
-                grid-column: span 4;
-            }
-            
+        .pic2 {
             img {
-                width: 250px;
-                border-radius: 10px;
-                cursor: pointer;
+                object-position: 25%;
             }
+        }
 
-            img:hover {
-                box-shadow: 0px 0px 10px #9c9c9c;
-                cursor: pointer;
-            }
+        img:hover {
+            box-shadow: 0px 0px 10px #9c9c9c;
+            cursor: pointer;
+        }
     }
 }
 

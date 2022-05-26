@@ -1,5 +1,8 @@
 import React from "react";
 import IndexHeaderContainer from '../index_header/index_header_container'
+import { BsArrowRightCircle } from 'react-icons/Bs';
+import { FaShippingFast } from 'react-icons/Fa';
+import { Link } from 'react-router-dom';
 
 class ListingIndex extends React.Component {
     constructor(props) {
@@ -30,25 +33,43 @@ class ListingIndex extends React.Component {
                 <div className="home-section">
                     <ul>
                         <span className="cat">Home & Living</span>
-                        <span className="cat-link">Shop these unique finds</span>
-                        {listings.map((listing) => {
+                        <Link className="cat-link" to='/listings/category/home'>
+                            Shop these unique finds 
+                            <BsArrowRightCircle size={16} className='arrow'/>
+                        </Link>
+                        {listings.map((listing, i) => {
                             if (listing.category === 'home') {
-                                return <img src={listing.photoUrl} 
-                                    alt="home" 
-                                    onClick={() => this.props.history.push(`/listings/${listing.id}`)}/>
+                                return (
+                                    <div className={`pic${i - 13}`} 
+                                        onClick={() => this.props.history.push(`/listings/${listing.id}`)}
+                                    >
+                                        <span className="price"><FaShippingFast className="ship"/>{" "}${listing.price}</span>
+                                        <img src={listing.photoUrl} alt="home" />
+                                    </div> 
+                                )
                             }
                         })}
                     </ul>
                 </div>
                 <div className="smash-section">
                         <ul>
-                            <span className="cat" >Super Smash Bros</span>
-                            {listings.map(listing => {
+                            <p className="cat" >
+                                Super Smash Bros
+                            </p>
+                            {listings.map((listing, i) => {
                                 if (listing.category === 'smash') {
-                                    return <img src={listing.photoUrl} 
-                                        onClick={() => this.props.history.push(`/listings/${listing.id}`)}/>
-                                }
+                                    return (
+                                        <div className={`pic${i - 33}`} 
+                                            onClick={() => this.props.history.push(`/listings/${listing.id}`)}
+                                        >
+                                            <img src={listing.photoUrl} />
+                                        </div>
+                                    )
+                                    }
                             })}
+                            <p>
+                                these neat things
+                            </p>
                         </ul>
                 </div>
                 <div className="fathers-section">

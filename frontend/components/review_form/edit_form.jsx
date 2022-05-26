@@ -66,7 +66,7 @@ class EditForm extends React.Component {
             <div className="edit-form-container">
                 <form onSubmit={this.handleSubmit}>
                     <div className="top-line">
-                        <span>Leave a Review</span>
+                        <span>Edit Your Review</span>
                         <StarRating 
                             size={34} 
                             updateStars={this.handleRating}                      
