@@ -1,6 +1,6 @@
 import React from "react";
 import IndexHeaderContainer from '../index_header/index_header_container'
-import { BsArrowRightCircle } from 'react-icons/Bs';
+import { BsArrowRight } from 'react-icons/Bs';
 import { FaShippingFast } from 'react-icons/Fa';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +35,7 @@ class ListingIndex extends React.Component {
                         <span className="cat">Home & Living</span>
                         <Link className="cat-link" to='/listings/category/home'>
                             Shop these unique finds 
-                            <BsArrowRightCircle size={16} className='arrow'/>
+                            <BsArrowRight size={20} className='arrow'/>
                         </Link>
                         {listings.map((listing, i) => {
                             if (listing.category === 'home') {
@@ -53,32 +53,47 @@ class ListingIndex extends React.Component {
                 </div>
                 <div className="smash-section">
                         <ul>
-                            <p className="cat" >
-                                Super Smash Bros
-                            </p>
+                            <div className="box-one">
+                                <span className="editors">Editor's Picks</span>
+                                <span className="title">Super Smash Bros!</span>
+                                <Link className="cat-link" to='/listings/category/smash'>
+                                    Shop these unique finds 
+                                    <BsArrowRight size={20} className='arrow'/>
+                                </Link>
+                            </div>
                             {listings.map((listing, i) => {
                                 if (listing.category === 'smash') {
                                     return (
                                         <div className={`pic${i - 33}`} 
                                             onClick={() => this.props.history.push(`/listings/${listing.id}`)}
                                         >
+                                            <span className="price"><FaShippingFast className="ship"/>{" "}${listing.price}</span>
                                             <img src={listing.photoUrl} />
                                         </div>
                                     )
                                     }
                             })}
-                            <p>
-                                these neat things
+                            <p className="smash-p">
+                               Super Smash Bros, a N64 game released in 1999, has 
+                               captured fans around the world. We have gifts for any Smash fan.
                             </p>
                         </ul>
                 </div>
                 <div className="fathers-section">
                         <ul>
-                            <span className="cat">Unique Father's Day Finds</span>
-                            {listings.map(listing => {
+                            <Link className="cat" to='/listings/category/fathers'>Dicover Unique Father's Day Gifts
+                                <BsArrowRight size={20} className='arrow'/>
+                            </Link>
+                            {listings.map((listing, i) => {
                                 if (listing.category === 'fathers') {
-                                    return <img src={listing.photoUrl} 
-                                        onClick={() => this.props.history.push(`/listings/${listing.id}`)}/>
+                                    return (
+                                        <div className={`pic${i - 46}`} 
+                                            onClick={() => this.props.history.push(`/listings/${listing.id}`)}
+                                        >
+                                            <span className="price"><FaShippingFast className="ship"/>{" "}${listing.price}</span>
+                                            <img src={listing.photoUrl} />
+                                        </div>
+                                    )
                                 }
                             })}
                         </ul>

@@ -10,11 +10,13 @@ class ListingIndexHeader extends React.Component {
         this.props.fetchListings()
     }
 
+
     render() {
         console.log(this.props)
-        if (!this.props.listings || this.props.listings.length < 10) {
+        if (!this.props.listings || this.props.listings.length < 53) {
             return null
         };
+
         const { listings, currentUser } = this.props
         let welcomeMsg;
         if (currentUser) {

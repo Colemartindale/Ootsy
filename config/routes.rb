@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :listings, only: [:index, :show]
     resources :reviews, only: [:create, :update, :destroy, :show]
     get "/listings/category/:category", to: "listings#index"
+    get "/listings/search/:query", to: "listings#index"
   end
 end

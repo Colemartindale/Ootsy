@@ -29,5 +29,10 @@ export const fetchListingsByCategory = category => dispatch => (
         .then(listings => dispatch(receiveAllListings(listings)))
 );
 
+export const fetchListingsBySearch = query => dispatch => (
+    APIListingUtil.fetchSearchListings(query)
+        .then(listings => dispatch(receiveAllListings(listings)))
+);
+
 
 

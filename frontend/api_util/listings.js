@@ -15,3 +15,9 @@ export const fetchCategoryListings = category => (
         url: `/api/listings/category/${category}`
     })
 );
+
+export const fetchSearchListings = query => (
+    $.ajax({
+        url: `/api/listings/search/${query}`
+    })
+);
