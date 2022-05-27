@@ -18,8 +18,10 @@ class Greeting extends React.Component {
 
   componentDidMount(){
     let dropDown = document.querySelector('.dropdown-content');
-    dropDown.style.display = 'none';
-  }
+    if (dropDown) {
+      dropDown.style.display = 'none';
+    }  
+  };
 
   dropDown(e) {
     if (!e.target.closest(".profile-dropdown") && !e.target.closest(".dropdown-content")) {
@@ -49,10 +51,10 @@ class Greeting extends React.Component {
             <img src={window.profilePicLogo} className='profile-logo' />
             <span>{this.props.currentUser.username}</span>
           </div>
-          <Link className='orders-container' to='/orders'>
+          <div className='orders-container'>
             <img src={window.ordersIcon} className='orders-icon' />
             <Link to='/orders'>Order History</Link>
-          </Link>
+          </div>
           <div className='sign-out-container'>
             <img src={window.signOutIcon} className='sign-out-icon' />
             <button className="logout-button" onClick={this.props.logout}>Log Out</button>

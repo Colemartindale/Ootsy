@@ -4,6 +4,7 @@ import {CgProfile} from 'react-icons/cg';
 import ReviewStarRating from "./review_star_rating";
 import CreateReviewFormContainer from '../review_form/create_review_container';
 import Footer from "../footer";
+import { Link } from "react-router-dom";
 
 class ListingShow extends React.Component {
     constructor(props) {
@@ -105,7 +106,7 @@ class ListingShow extends React.Component {
                             ))}
                         </select>
                     </div>
-                    <button>Add to Cart</button>
+                    <Link  to='/cart' className="button-link"><button className='button'>Add to Cart</button> </Link>
                     <div className="want-this">
                         <FaCartPlus size={40}/>
                         <p>Other people want this. 

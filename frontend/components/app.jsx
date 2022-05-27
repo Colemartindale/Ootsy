@@ -9,8 +9,10 @@ import ListingIndexContainer from './listing_index/listing_index_container';
 import ListingShowContainer from './listing_show/listing_show_container';
 import CategoryContainer from './category_index/category_index_container';
 import SearchPageContainer from './search/search_page_container';
-import Footer from './footer';
+import Footer from './footer_container';
 import FeatureComingSoon from './feature_coming_soon';
+import { openModal } from "../actions/modal_actions";
+
 
 const App = () => (
 
@@ -52,7 +54,7 @@ const App = () => (
         <Redirect to='/'/>
       </Switch>
 
-      <Footer/>
+      <Footer openModal={openModal}/>
     </div>
   );
   

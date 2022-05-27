@@ -33,6 +33,12 @@ class ReviewForm extends React.Component {
         }
     };
 
+    componentDidUpdate(prevProps) {
+        if (this.props.currentUser !== prevProps.currentUser) {
+            this.setState({user_id: this.props.currentUser})
+        }
+    };
+
     handleRating(rating) {
         this.setState({...this.state, rating})
     };

@@ -135,7 +135,7 @@ clothes4 = Listing.create!(
     description: "Our minimal style of overalls. With a tailored leg and a clean, elegant side profile with the big deep pockets, 
         these overalls will quickly become a favorite - the most easy wearing and comfortable one piece, you’ll reach for them again and 
         again.", 
-    price: 79.80, 
+    price: 79.88, 
     category: "clothing", 
     quantity: 2, 
     tags: "overalss, clothes, womens, yellow", 
@@ -160,7 +160,7 @@ clothes6 = Listing.create!(
     description: "→ Solid color ones like White and Black are 100% Cotton. → Heather Colors are cotton/polyester blend and they are 
         super comfy soft! → Bella-Canvas Unisex Jersey Short Sleeve Crew-Neck Unisex T-Shirt → Soft and High-Quality Fabric, sueded 
         pre-shrunk sueded jersey, taped shoulder-shoulder. → Sueded Jersey → Side Seamed → Retail fit", 
-    price: 11.50, 
+    price: 11.55, 
     category: "clothing", 
     quantity: 56, 
     tags: "shirt, womens, pink, owl", 
@@ -460,7 +460,7 @@ smash1 = Listing.create!(
     product_name: "Kirby Burger Art Print", 
     description: "Kirby Burger art print is available as a giclee on archival matte paper. 
         This print is perfect for gamers that adore the Kirby series!", 
-    price: 20.10, 
+    price: 20.11, 
     category: "smash", 
     quantity: 120, 
     tags: "video games, kirby, smash bros, nintendo", 
@@ -600,7 +600,7 @@ electronics5 = Listing.create!(
         External speaker options
         Sonos integration options
         Set top tube amplifier options", 
-    price: 4037.50, 
+    price: 4037.55, 
     category: "electronics", 
     quantity: 1, 
     tags: "stereo, music, speakers, electronics", 
@@ -613,7 +613,7 @@ electronics6 = Listing.create!(
     description: "The Mini TV Apple Watch Charging Station is a fun little way to display your apple watch. With the apple watch becoming
         the television screen, the stand gives your watch a classy, retro look. A circular cutout is located in the back to holster 
         the charger, and the apple watch fits snuggly in the slot in the middle.", 
-    price: 16.80, 
+    price: 16.88, 
     category: "electronics", 
     quantity: 64, 
     tags: "apple watch, charger, gift, 3D print", 
@@ -629,7 +629,7 @@ fathers1 = Listing.create!(
         Inks: Black
         Size: Folded A2
         Single Card with one kraft envelope", 
-    price: 5.50, 
+    price: 5.55, 
     category: "fathers", 
     quantity: 500, 
     tags: "card, gift, father", 
@@ -643,7 +643,7 @@ fathers2 = Listing.create!(
         ✥Free bulb included with your purchase, bulbs last about 15,000 hours. Replacement bulbs are easy to find online and your local 
         hardware store. Any LED or standard bulb will also work in any of our lamps socket.
         ✥Lamps parts are made of real steel.", 
-    price: 48.60, 
+    price: 48.62, 
     category: "fathers", 
     quantity: 52, 
     tags: "lamp, desk, gift, fathers", 
