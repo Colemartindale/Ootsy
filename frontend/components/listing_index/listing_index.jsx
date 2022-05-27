@@ -22,14 +22,7 @@ class ListingIndex extends React.Component {
         return (
             <div className="index-page">
                 <IndexHeaderContainer />
-                {/* <ul className="index-ul">
-                    {listings.map(listing => 
-                            <a href={`#/listings/${listing.id}`}>
-                                <li key={listing.id}><img src={listing.photoUrl} /></li>
-                            </a>
-                        )
-                    }
-                </ul> */}
+
                 <div className="home-section">
                     <ul>
                         <span className="cat">Home & Living</span>
@@ -127,10 +120,7 @@ class ListingIndex extends React.Component {
                         </span>
                     </p>
                 </div>
-                <div className="questions">
-                    <span className="grid1">Have a question? Well, we’ve got some answers.</span>
-                    <button className="grid2">Go to Help Center</button>
-                </div>
+           
             </div>
         )
     };

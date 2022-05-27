@@ -262,6 +262,7 @@
     position: relative;
     box-sizing: border-box;
     padding-left: 13px;
+    text-decoration: none;
 
     a {
         text-decoration: none;
@@ -281,6 +282,11 @@
     padding: 15px;
     position: relative;
     box-sizing: border-box;
+    cursor: pointer;
+     
+    button {
+        cursor: pointer;
+    }
 }
 
 .sign-out-container:hover {

@@ -24,19 +24,44 @@
         background-color: #458476;
         color: white;
 
+        .fleg{
+            transform: translateY(3px);
+        }
+
         span {
             margin-left: 10px;
+            font-size: 12px;
         }
 
         .links {
             width: 120px;
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
-        }
+            height: 25px;
 
-        .links > {
-            border-radius: 5px;
+            Link {
+                color: black;
+            }
+
+            .git {
+                border-radius: 5px;
+                transform: translateY(-1px);
+            }
+
+            .github {
+
+                color: white;
+            }
+
+            .link {
+                transform: translateY(1px);
+                color: white;
+            }
+            
+            .port {
+                color: white;
+
+            }
         }
 
     }

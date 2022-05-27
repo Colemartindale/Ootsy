@@ -10,6 +10,7 @@ import ListingShowContainer from './listing_show/listing_show_container';
 import CategoryContainer from './category_index/category_index_container';
 import SearchPageContainer from './search/search_page_container';
 import Footer from './footer';
+import FeatureComingSoon from './feature_coming_soon';
 
 const App = () => (
 
@@ -43,8 +44,8 @@ const App = () => (
 
       <Switch>
         <Route exact path='/' component={ListingIndexContainer}/>
-        <Route exact path='/orders' render={() => <h1>order History</h1>}/>
-        <Route exact path='/cart' render={() => <h1>Cart</h1>}/>
+        <Route exact path='/orders' component={FeatureComingSoon}/>
+        <Route exact path='/cart' component={FeatureComingSoon}/>
         <Route path='/listings/category/:category' component={CategoryContainer}/>
         <Route path='/listings/search/:query' component={SearchPageContainer} />
         <Route path='/listings/:listingId' component={ListingShowContainer}/>

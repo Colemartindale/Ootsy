@@ -3,6 +3,7 @@ import { FaCheck, FaShippingFast, FaCartPlus } from 'react-icons/fa';
 import {CgProfile} from 'react-icons/cg';
 import ReviewStarRating from "./review_star_rating";
 import CreateReviewFormContainer from '../review_form/create_review_container';
+import Footer from "../footer";
 
 class ListingShow extends React.Component {
     constructor(props) {
