@@ -28,4 +28,16 @@ Ootsy's splash page implements SCSS grid layouts to add style and shape to photo
 
 ---
 
+## Technologies
+
+* AWS
+* React.js
+* Redux.js
+* Javascript
+* CSS / SCSS
+* HTML
+* Ruby on Rails
+* PostgresSQL
+
+
 
