@@ -34,7 +34,7 @@ class ListingIndexHeader extends React.Component {
                             <span>Jewelry</span>
                         </li>
                         <li>
-                            <img src={listings[10].photoUrl} alt='clothing' onClick={() => this.props.history.push(`/listings/category/clothes`)}/>
+                            <img src={listings[10].photoUrl} alt='clothing' onClick={() => this.props.history.push(`/listings/category/clothing`)}/>
                             <span>Clothing</span>
                         </li>
                         <li>

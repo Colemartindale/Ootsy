@@ -54,7 +54,7 @@ const App = () => (
         <Redirect to='/'/>
       </Switch>
 
-      <Footer openModal={openModal}/>
+      <Footer />
     </div>
   );
   
