@@ -104,6 +104,7 @@
         display: flex;
         justify-content: center;
         margin: auto;
+        width: 85vw;
 
         ul > div {
             position: relative;
@@ -134,7 +135,6 @@
             justify-content: center;
             grid-template-columns: repeat(4, 21.25%);
             grid-template-rows:  auto 1rem 12rem 3rem 12rem;
-            // grid-template-rows:  auto 30px 250px 50px 250px;
             grid-gap: 20px;
             font-family: sans-serif;
             grid-template-areas: 
@@ -145,6 +145,7 @@
                 "pic4 pic5 pic6 pic7";
             box-sizing: border-box;
             margin-bottom: 10%;
+            width: 100%;
 
             .cat {
                 grid-column: span 4;
@@ -158,7 +159,7 @@
                 align-self: center;
                 text-decoration: none;
                 color: black;
-                width: 25%;
+                width: 85%;
                 
                 .arrow {
                     margin-left: 10px;
@@ -241,6 +242,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    width: 85vw;
 
     .box-one {
         display: flex;
@@ -343,6 +345,8 @@
 .fathers-section {
     display: flex;
     justify-content: center;
+    margin: auto;
+    width: 85vw;
 
     .cat {
         font-size: 28px;
@@ -429,21 +433,21 @@
 
 @media only screen and (max-width: 850px) {
     .home-section {
-        ul {
+        #home-ul {
             display: grid;
-                justify-content: center;
-                grid-template-columns: repeat(4, 21.25%);
-                grid-template-rows:  auto 30px 250px 50px 250px;
-                grid-gap: 20px;
-                font-family: sans-serif;
-                grid-template-areas: 
-                    "cat cat cat cat"
-                    "catlink catlink catlink catlink"
-                    "pic0 pic1 pic2 pic3"
-                    "pic0 pic5 pic2 pic7"
-                    "pic4 pic5 pic6 pic7";
-                box-sizing: border-box;
-                margin-bottom: 10%;
+            justify-content: center;
+            grid-template-columns: repeat(4, 21.25%);
+            grid-template-rows:  auto 1rem 9rem 2rem 9rem;
+            grid-gap: 20px;
+            font-family: sans-serif;
+            grid-template-areas: 
+                "cat cat cat cat"
+                "catlink catlink catlink catlink"
+                "pic0 pic1 pic2 pic3"
+                "pic0 pic5 pic2 pic7"
+                "pic4 pic5 pic6 pic7";
+            box-sizing: border-box;
+            margin-bottom: 10%;
 
         }
     }
@@ -488,6 +492,50 @@
 }
 
 @media only screen and (max-width: 700px) {
+    .home-section {
+        #home-ul {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(2, 42.5%);
+            grid-template-rows:  auto 1rem 9rem 3rem 9rem 9rem 3rem 9rem;
+            grid-gap: 20px;
+            font-family: sans-serif;
+            grid-template-areas: 
+                "cat cat"
+                "catlink catlink"
+                "pic0 pic1"
+                "pic0 pic5"
+                "pic4 pic5"
+                "pic2 pic3"
+                "pic2 pic7"
+                "pic6 pic7";
+            box-sizing: border-box;
+            margin-bottom: 10%;
+
+            .cat {
+                grid-column: span 2;
+                font-size: 28px;
+                font-weight: 200;
+            }
+            
+            .cat-link {
+                grid-column: span 2;
+                font-weight: 200;
+                align-self: center;
+                text-decoration: none;
+                color: black;
+                width: 85%;
+                
+                .arrow {
+                    margin-left: 10px;
+                    transition: all 200ms ease-out;
+                    transform: translateY(5px);
+                }
+            }
+
+        }
+    }
+
     .fathers-section ul{
         grid-template-rows: auto 7rem 7rem;
         div {
@@ -515,25 +563,16 @@
            }
        }
    
-        ul {
-                grid-template-rows: 7rem 7rem;
-                div {
+       ul {
+            grid-template-columns: repeat(2, 45%);
+            grid-template-rows: repeat(4, 11rem);
 
-                    .price {
-                        font-size: 10px;
-                        padding: 3px;
-                    }
-                }
+            .smash-p {
+                font-size: 16px;
+            }
 
-                .smash-p {
-                    font-size: 14px;
-                }
-
-                
-
-                .ship {
-                    width: 10px;
-                }
+        
+    
         }
     }
 }
@@ -562,7 +601,7 @@
         }
 
         .pic1 {
-            display: none;
+            // display: none;
         }
 
         div {
@@ -581,26 +620,26 @@
 
    .smash-section {
 
-    .box-one {
-        .title {
-            font-size: 20px;
-        }
-
-        .cat-link {
-            font-size: 14px;
-        }
-    }
-
-    ul {
-            grid-template-columns: repeat(2, 45%);
-            grid-template-rows: repeat(4, 11rem);
-    
-            .smash-p {
-                font-size: 16px;
+        .box-one {
+            .title {
+                font-size: 20px;
             }
-    
-            
+
+            .cat-link {
+                font-size: 14px;
+            }
+        }
+
+        ul {
+                grid-template-columns: repeat(2, 45%);
+                grid-template-rows: repeat(4, 11rem);
         
+                .smash-p {
+                    font-size: 16px;
+                }
+        
+                
+            
         }
     }
 

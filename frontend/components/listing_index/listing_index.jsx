@@ -24,7 +24,7 @@ class ListingIndex extends React.Component {
                 <IndexHeaderContainer />
 
                 <div className="home-section">
-                    <ul>
+                    <ul id="home-ul">
                         <span className="cat">Home & Living</span>
                         <Link className="cat-link" to='/listings/category/home'>
                             Shop these unique finds 
