@@ -405,7 +405,8 @@
             "big big top1 top2 top3"
             "big big bot1 bot2 bot3";
         grid-gap: 20px;
-
+        width: 100%;
+        
         .cat {
             grid-column: span 5;
             width: 100%;
@@ -536,22 +537,6 @@
         }
     }
 
-    .fathers-section ul{
-        grid-template-rows: auto 7rem 7rem;
-        div {
-
-            .price {
-                font-size: 10px;
-                padding: 3px;
-            }
-        }
-
-
-        .ship {
-            width: 10px;
-        }
-   }
-
    .smash-section {
        .box-one {
            .title {
@@ -575,46 +560,109 @@
     
         }
     }
-}
 
-@media only screen and (max-width: 500px) {
     .fathers-section ul{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(3, 30%);
-        grid-template-rows: auto 6rem 6rem 6rem;
+        grid-template-rows: auto 9rem 9rem 11rem 11rem;
+        grid-template-columns: repeat(4, 21.25%);
         grid-template-areas: 
-            "h h h"
-            "big big top1"
-            "big big bot1"
-            "top2 top3 0"
-            ;
-        grid-gap: 10px;
-
-        .cat {
-            grid-column: span 3;
-            font-size: 18px;
-        }
-
-        .pic2 {
-            grid-area: big;
-        }
-
-        .pic1 {
-            // display: none;
-        }
-
+            "h h h h "
+            "big big big top1"
+            "big big big bot1"
+            "midl midl midr midr"
+            "botl botl botr botr";
+            
         div {
-
             .price {
                 font-size: 10px;
                 padding: 3px;
             }
         }
 
+        .pic1 {
+            grid-area: midl;
+        }
+
+        .pic3 {
+            grid-area: botl;
+        }
+
+        .pic4 {
+            grid-area: botr;
+        }
+
+        .pic5 {
+            grid-area: bot1;
+        }
+
+        .pic6 {
+            grid-area: midr;
+        }
+
 
         .ship {
             width: 10px;
+        }
+
+        .cat {
+            width: 100%;
+            font-size: 24px;
+        }
+
+        .pic2 {
+            grid-area: big;
+        }
+   }
+}
+
+@media only screen and (max-width: 500px) {
+    .fathers-section ul{
+        grid-template-rows: auto 7rem 7rem 9rem 9rem;
+        grid-template-columns: repeat(4, 21.25%);
+        grid-template-areas: 
+            "h h h h "
+            "big big big top1"
+            "big big big bot1"
+            "midl midl midr midr"
+            "botl botl botr botr";
+            
+        div {
+            .price {
+                font-size: 10px;
+                padding: 3px;
+            }
+        }
+
+        .pic1 {
+            grid-area: midl;
+        }
+
+        .pic3 {
+            grid-area: botl;
+        }
+
+        .pic4 {
+            grid-area: botr;
+        }
+
+        .pic5 {
+            grid-area: bot1;
+        }
+
+        .pic6 {
+            grid-area: midr;
+        }
+
+
+        .ship {
+            width: 10px;
+        }
+
+        .cat {
+            width: 100%;
+        }
+
+        .pic2 {
+            grid-area: big;
         }
    }
 
@@ -647,34 +695,56 @@
 
 @media only screen and (max-width: 315px) {
     .fathers-section ul{
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(3, 30%);
-        grid-template-rows: auto 4rem 4rem 4rem;
+        grid-template-rows: auto 5rem 5rem 7rem 7rem;
+        grid-template-columns: repeat(4, 21.25%);
         grid-template-areas: 
-            "h h h"
-            "big big top1"
-            "big big bot1"
-            "top2 top3 0"
-            ;
-        grid-gap: 7px;
-
-        .cat {
-            font-size: 16px;
-        }
-
+            "h h h h "
+            "big big big top1"
+            "big big big bot1"
+            "midl midl midr midr"
+            "botl botl botr botr";
+            
         div {
-
             .price {
-                font-size: 8px;
+                font-size: 10px;
                 padding: 3px;
             }
-
-            .ship {
-                width: 8px;
-            }
         }
-    }
+
+        .pic1 {
+            grid-area: midl;
+        }
+
+        .pic3 {
+            grid-area: botl;
+        }
+
+        .pic4 {
+            grid-area: botr;
+        }
+
+        .pic5 {
+            grid-area: bot1;
+        }
+
+        .pic6 {
+            grid-area: midr;
+        }
+
+
+        .ship {
+            width: 10px;
+        }
+
+        .cat {
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .pic2 {
+            grid-area: big;
+        }
+   }
 
     .smash-section {
 
@@ -839,6 +909,375 @@
         box-shadow: 0 1px 4px 0 rgba(34, 34, 34, 50%);
         width: 42%;
         height: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+
+    .what-is-ootsy {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: 75px auto;
+        background-color: #ffe8e1;
+        padding: 40px;
+        height: 425px;
+        gap: 25px;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100vw;
+        margin-top: 55px;
+        
+    
+        .grid1 {
+            text-align: center;
+            font-size: 40px;
+            grid-column: 1 / span 3;
+            height: 50px;
+            
+        }
+    
+        .grid2 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid3 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid4 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid5 {
+            grid-column: 1 / span 3;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+            font-family: sans-serif;
+            align-self: center;
+        }
+    
+        .grid6 {
+            grid-column: 1 / span 3;
+            justify-self: center;
+            width: 25%;
+            height: 45px;
+            background: none;
+            border: black 2px solid;
+            border-radius: 25px;
+            font-weight: 525;
+            cursor: pointer;
+            align-self: center;
+            transition: all 200ms;
+            font-size: 20px;
+        }
+    
+        .grid6:hover {
+            box-shadow: 0 1px 4px 0 rgba(34, 34, 34, 50%);
+            width: 27%;
+            height: 50px;
+        }
+    
+    }
+
+}
+
+@media only screen and (max-width: 580px) {
+
+    .what-is-ootsy {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: 75px auto;
+        background-color: #ffe8e1;
+        padding: 40px;
+        height: 475px;
+        gap: 25px;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100vw;
+        margin-top: 55px;
+        
+    
+        .grid1 {
+            text-align: center;
+            font-size: 40px;
+            grid-column: 1 / span 3;
+            height: 50px;
+            
+        }
+    
+        .grid2 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            height: 20rem;
+            width: 9rem;
+            margin: 2px;
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid3 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+            height: 20rem;
+            width: 9rem;
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid4 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+            height: 20rem;
+            width: 9rem;
+
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid5 {
+            grid-column: 1 / span 3;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+            font-family: sans-serif;
+            align-self: center;
+        }
+    
+        .grid6 {
+            grid-column: 1 / span 3;
+            justify-self: center;
+            width: 25%;
+            height: 45px;
+            background: none;
+            border: black 2px solid;
+            border-radius: 25px;
+            font-weight: 525;
+            cursor: pointer;
+            align-self: center;
+            transition: all 200ms;
+            font-size: 20px;
+        }
+    
+        .grid6:hover {
+            box-shadow: 0 1px 4px 0 rgba(34, 34, 34, 50%);
+            width: 27%;
+            height: 50px;
+        }
+    
+    }
+
+}
+
+@media only screen and (max-width: 627px) {
+
+    .what-is-ootsy {
+        background-color: #ffe8e1;
+        padding: 40px;
+        height: auto;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100vw;
+        margin-top: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    
+        .grid1 {
+            text-align: center;
+            font-size: 40px;
+            // grid-column: 1 / span 3;
+            height: 50px;
+            
+        }
+    
+        .grid2 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            height: 10rem;
+            width: 23rem;
+            margin: 2px;
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid3 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+            height: 10rem;
+            width: 23rem;
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid4 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+            height: 10rem;
+            width: 23rem;
+
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+    .what-is-ootsy {
+        background-color: #ffe8e1;
+        padding: 40px;
+        height: auto;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100vw;
+        margin-top: 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    
+        .grid1 {
+            text-align: center;
+            font-size: 34px;
+            height: 5rem;
+            width: 100%;
+            
+        }
+    
+        .grid2 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            height: 13rem;
+            width: 17rem;
+            margin: 2px;
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid3 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+            height: 13rem;
+            width: 17rem;
+    
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
+    
+        .grid4 {
+            font-weight: 500;
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 2px;
+            height: 13rem;
+            width: 17rem;
+
+            span {
+                margin-top: 15px;
+                display: block;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 25px;
+            }
+        }
     }
 
 }
