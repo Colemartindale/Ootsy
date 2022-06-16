@@ -6,6 +6,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 150px;
+
+    .header-welcome {
+        text-align: center;
+    }
 }
 
 .index-header {
@@ -22,12 +26,13 @@
 
 .prof-ul {
     display: flex;
+    // flex-wrap: wrap;
     justify-content: space-between;
-    width: min(80%, 100%);
-    position: absolute;
-    bottom: -65px;
     height: 180px;
-    width: 80%;
+    width: 90%;
+    transform: translateY(70px);
+    margin: auto;
+    min-width: 350px;
 
     li {
         display: flex;
@@ -38,8 +43,16 @@
         height: 160px;
         transform: translateY(10px);
         padding-bottom: 15px;
-        margin-left: 40px;
-        margin-right: 40px;
+        border-bottom: rgb(255, 255, 255) 2px solid;
+
+
+        &:first-of-type {
+            margin-left: 2rem;
+        }
+
+        &:last-of-type {
+            margin-right: 2rem;
+        }
     }
 
     span {
@@ -60,8 +73,8 @@
     }
 
     img {
-        width: 115px;
-        height: 115px;
+        width: 114px;
+        height: 114px;
         border-radius: 50%;
         box-shadow: 1px;
         position: absolute;
@@ -74,6 +87,80 @@
     li:hover img{
         transform: scale(110%);
     }
+}
+
+@media only screen and (max-width: 900px) {
+    .header-welcome {
+        font-size: 26px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        min-width: 350px;
+    }
+
+    .prof-ul {
+        width: 70%;
+
+        img {
+            width: 94px;
+            height: 94px;
+        }
+
+        .electronics-li {
+            display: none;
+        }
+
+        .jewelry-li {
+            display: none;
+        }
+    }
+    
+    
+}
+
+@media only screen and (max-width: 640px) {
+    .prof-ul {
+        width: 90%;
+        transform: translateY(48px);
+
+
+        img {
+            width: 54px;
+            height: 54px;
+        }
+
+        .electronics-li {
+            display: none;
+        }
+
+        .jewelry-li {
+            display: none;
+        }
+    }
+    
+    
+}
+
+@media only screen and (max-width: 515px) {
+    .prof-ul {
+        width: 95%;
+        transform: translateY(48px);
+
+
+        img {
+            width: 54px;
+            height: 54px;
+        }
+
+        .electronics-li {
+            display: none;
+        }
+
+        .jewelry-li {
+            display: none;
+        }
+    }
+    
+    
 }
 
 
@@ -105,6 +192,7 @@
         justify-content: center;
         margin: auto;
         width: 85vw;
+        min-width: 315px;
 
         ul > div {
             position: relative;
@@ -243,6 +331,8 @@
     justify-content: center;
     margin: auto;
     width: 85vw;
+    min-width: 315px;
+
 
     .box-one {
         display: flex;
@@ -347,6 +437,8 @@
     justify-content: center;
     margin: auto;
     width: 85vw;
+    min-width: 315px;
+
 
     .cat {
         font-size: 28px;
