@@ -11,7 +11,7 @@ function Modal({modal, closeModal}) {
     return null;
   }
   let component;
-  switch (modal) {
+  switch (modal) {  
     case 'login':
       component = <LoginFormContainer />;
       break;
@@ -23,6 +23,7 @@ function Modal({modal, closeModal}) {
       break;
     case "help-center":
       component = <HelpCenter />;
+      break;
     default:
       return null;
   }

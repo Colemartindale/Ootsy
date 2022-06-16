@@ -106,7 +106,7 @@ class ListingIndex extends React.Component {
                     <p className="grid3">
                         Support independent creators
                         <span>
-                            There’s no Etsy warehouse – just millions of people selling the 
+                            There’s no Ootsy warehouse – just millions of people selling the 
                             things they love. We make the whole process easy, helping you connect 
                             directly with makers to find something extraordinary.
                         </span>

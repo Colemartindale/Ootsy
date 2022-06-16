@@ -1,0 +1,30 @@
+.help-center-modal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 6px 36px rgb(34, 34, 34);
+    border-radius: 24px;
+    width: 95%;
+    padding: 30px;
+    height: 300px;
+    font-family: sans-serif;
+
+    p {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        background-color: rgb(172, 255, 227);
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        font-size: 32px;
+    }
+}

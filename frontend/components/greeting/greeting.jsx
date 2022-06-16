@@ -32,7 +32,7 @@ class Greeting extends React.Component {
 
   toggleDropDown() {
     let dropDown = document.querySelector('.dropdown-content');
-    if (dropDown.style.display === 'none') {
+    if (dropDown.style.display === 'none' || dropDown.style.display === '') {
       dropDown.style.display = 'flex'
       document.addEventListener('click', this.dropDown)
     } else {

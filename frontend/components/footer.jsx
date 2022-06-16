@@ -16,7 +16,9 @@ class Footer extends React.Component {
             <div className="footer">
                 <div className="questions">
                     <span className="grid1">Have a question? Well, we’ve got some answers.</span>
-                    <button className="grid2" onClick={() => this.props.openModal("help-center")}>Go to Help Center</button>
+                    <button className="grid2" onClick={() => this.props.openModal("help-center")}>
+                        Go to Help Center
+                    </button>
                 </div>
                 <div className="powered-by">
                     <GiGreenPower size={25}/>

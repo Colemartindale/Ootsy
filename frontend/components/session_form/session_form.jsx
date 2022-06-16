@@ -31,7 +31,11 @@ class SessionForm extends React.Component {
   signInDemo(e) {
     e.preventDefault();
     const user = {username: 'demo user', password: 'demopw'}
-    this.props.processForm(user).then(this.props.closeModal);
+    if (this.props.formType === 'Sign in') {
+      this.props.processForm(user).then(this.props.closeModal);
+    } else {
+      this.props.processDemoForm(user).then(this.props.closeModal);
+    };
   };
 
   renderErrors() {
@@ -85,8 +89,14 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-            <button onClick={this.signInDemo} className='demo-user'>Demo User Sign in</button>
+            <input 
+              className="session-submit" 
+              type="submit" 
+              value={this.props.formType} 
+            />
+            <button onClick={this.signInDemo} className='demo-user'>
+              Demo User Sign in
+            </button>
           </div>
         </form>
       </div>
