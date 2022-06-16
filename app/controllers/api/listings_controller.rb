@@ -5,7 +5,14 @@ class Api::ListingsController < ApplicationController
             render :category_index
         elsif params[:query] 
             @listings = Listing.where("product_name LIKE ?", "% " + "%" + params[:query] + "%" + " %")
+                        .or(Listing.where("product_name LIKE ?", "%" + params[:query] + "%"))
+                        .or(Listing.where("product_name LIKE ?", "%" + params[:query].capitalize + "%"))
+                        .or(Listing.where("product_name LIKE ?", "%" + params[:query].upcase + "%"))
+                        .or(Listing.where("product_name LIKE ?", "%" + params[:query].downcase + "%"))
                         .or(Listing.where("tags LIKE ?", "% " + "%" + params[:query] + "%" + " %"))
+                        .or(Listing.where("tags LIKE ?", "%" + params[:query] + "%"))
+                        # .or(Listing.where("description LIKE ?", "% " + "%" + params[:query] + "%" + " %"))
+                        # .or(Listing.where("description LIKE ?", "%" + params[:query] + "%"))
             render :category_index
         else
             @listings = Listing.all
