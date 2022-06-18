@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :listings, only: [:index, :show]
     resources :reviews, only: [:create, :update, :destroy, :show]
+    resources :cart_items, only: [:index, :create, :update, :destroy]
     get "/listings/category/:category", to: "listings#index"
     get "/listings/search/:query", to: "listings#index"
+    get "users/:user_id/cart_items", :to => "cart_items#index"
   end
 end

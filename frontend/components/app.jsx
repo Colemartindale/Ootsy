@@ -4,7 +4,8 @@ import { Route, Redirect, Switch, Link,} from 'react-router-dom';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import SearchBarContainer from './search/search_bar_container';
-import Cart from './cart/cart';
+import CartGreetingContainer from './cart/cart_greeting_container';
+import CartContainer from './cart/cart_container';
 import ListingIndexContainer from './listing_index/listing_index_container';
 import ListingShowContainer from './listing_show/listing_show_container';
 import CategoryContainer from './category_index/category_index_container';
@@ -26,7 +27,7 @@ const App = () => (
             </Link></li>
             <li className='search-li'><SearchBarContainer /></li>
             <li className='greeting-li'><GreetingContainer /></li>
-            <li className='cart-li'><Cart/></li>
+            <li className='cart-li'><CartGreetingContainer /></li>
           </ul>
         </header>
       </div>
@@ -47,7 +48,7 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={ListingIndexContainer}/>
         <Route exact path='/orders' component={FeatureComingSoon}/>
-        <Route exact path='/cart' component={FeatureComingSoon}/>
+        <Route exact path='/cart' component={CartContainer}/>
         <Route path='/listings/category/:category' component={CategoryContainer}/>
         <Route path='/listings/search/:query' component={SearchPageContainer} />
         <Route path='/listings/:listingId' component={ListingShowContainer}/>

@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 class ListingShow extends React.Component {
     constructor(props) {
         super(props)
+        this.addToCart = this.addToCart.bind(this);
+        this.state = { newQuantity: 1}
     };
 
     componentDidMount() {
@@ -37,6 +39,42 @@ class ListingShow extends React.Component {
         };
     };
 
+    addToCart() {
+        if (this.props.currentUser !== undefined) {
+            const dummy = {
+                user_id: this.props.currentUser.id,
+                product_id: this.props.listing.id,
+                quantity: 1
+            }
+            
+            let oldQuantity;
+            let result = false;
+
+            Object.values(this.props.cart).forEach(element => {
+                if (element.productId === dummy.product_id) {
+                    oldQuantity = element.quantity;
+                    dummy.id = element.id;
+                    result = true;
+                }
+            });
+            
+            if (result) {
+                dummy.quantity = oldQuantity + this.state.newQuantity;
+                this.props.editCartItem(dummy)
+                .then(()=>this.props.getCartItemsById(this.props.currentUser.id))
+                .then(()=>this.props.history.push("/cart"));
+            
+            } else {
+                dummy.quantity = this.state.newQuantity;
+                this.props.createCartItem(dummy)
+                    .then(()=>this.props.getCartItemsById(this.props.currentUser.id))
+                    .then(()=>this.props.history.push("/cart"));
+            }
+        } else {
+            this.props.history.push("/login")
+        }
+    }
+
     render() {
         // console.log(this.props.listing, 'hi')
         const { listing, reviews } = this.props;
@@ -44,12 +82,12 @@ class ListingShow extends React.Component {
         if (!listing) {
             return null
         };
-
-       let avgReview = 0;
-       reviews.forEach(review => {
-           avgReview += review.rating
-       });
-       let avgReviewRating = Math.floor(avgReview / reviews.length)
+        console.log(listing, "bloopybloppy")
+        let avgReview = 0;
+        reviews.forEach(review => {
+            avgReview += review.rating
+        });
+        let avgReviewRating = Math.floor(avgReview / reviews.length)
 
         return(
             <div className="show-container">
@@ -106,11 +144,14 @@ class ListingShow extends React.Component {
                             ))}
                         </select>
                     </div>
-                    <Link  to='/cart' className="button-link"><button className='button'>Add to Cart</button> </Link>
+                    <Link  to='/cart' className="button-link" onClick={this.addToCart}>
+                        <button className='button'>Add to Cart</button> 
+                    </Link>
                     <div className="want-this">
                         <FaCartPlus size={40}/>
                         <p>Other people want this. 
-                            <span>{" "}{Math.floor(Math.random() * 8 + 4)}{" "} 
+                            <span>
+                                {" "}{Math.floor(Math.random() * 8 + 4)}{" "} 
                                 {"people have this in their carts right now."}
                             </span>
                         </p> 
