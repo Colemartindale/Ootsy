@@ -1,5 +1,7 @@
 .cart-page {
     font-family: sans-serif;
+    max-width: 1250px;
+    width: 100%;
 
     .cart-header {
         display: flex;
@@ -40,5 +42,14 @@
                 transform: scaleX(130%) scaleY(260%);
             }
         }
+    }
+
+    .cart-middle {
+        display: flex;
+        margin-bottom: 2rem;
+        gap: 5%;
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

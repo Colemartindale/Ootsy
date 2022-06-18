@@ -164,29 +164,31 @@ class Cart extends React.Component {
                         </h1>
                         <Link to="/">Keep shopping</Link>
                     </div>
-                    <div className="cart-items">
-                        {this.cartItemList()}
-                    </div>
-                    <div className="cart-payment">
-                        <div className="payment-top">
-                            <h1>How you'll pay</h1>
-                            <div className="payment-inputs-container">
+                    <div className="cart-middle">
+                        <div className="cart-items">
+                            {this.cartItemList()}
+                        </div>
+                        <div className="cart-payment">
+                            <div className="payment-top">
+                                <h1>How you'll pay</h1>
+                                <div className="payment-inputs-container">
 
+                                </div>
+                                <div className="payment-total">
+                                    {this.calculateSubtotal()}
+                                </div>
                             </div>
-                            <div className="payment-total">
-                                {this.calculateSubtotal()}
+                            <div className="payment-mid">
+                                <div className="shipping-container">
+                                    <h1>Shipping</h1>
+                                    <h2>(To United States)</h2>
+                                </div>
+                                <h3>FREE</h3>
                             </div>
-                        </div>
-                        <div className="payment-mid">
-                            <div className="shipping-container">
-                                <h1>Shipping</h1>
-                                <h2>(To United States)</h2>
+                            <div className="payment-bottom">
+                                <button>Proceed to checkout</button>
+                                <p>*Additional duties and taxes may apply</p>
                             </div>
-                            <h3>FREE</h3>
-                        </div>
-                        <div className="payment-bottom">
-                            <button>Proceed to checkout</button>
-                            <p>*Additional duties and taxes may apply</p>
                         </div>
                     </div>
                     <p>

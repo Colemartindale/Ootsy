@@ -88,7 +88,7 @@ class CartItem extends React.Component {
                     </div>
                 </div>
                 <div className="cart-item-gift-container">
-                    <label htmlFor="">
+                    <label htmlFor="" className="checkbox-container">
                         <input type="checkbox" />
                         This order is a gift 
                     </label>
@@ -96,9 +96,15 @@ class CartItem extends React.Component {
                 </div>
                 <div className="cart-item-bottom">
                     <div className="text-container">
-                        <textarea placeholder={`Add a note to ${product.shop_name}`} id="" cols="30" rows="10"></textarea>
+                        <textarea 
+                            placeholder={`Add a note to ${product.shop_name} (optional)`} 
+                            id="textarea" 
+                            cols="30" 
+                            rows="10"
+                        >
+                        </textarea>
                     </div>
-                    <p>{this.handleDate()}</p>
+                    {this.handleDate()}
                 </div>
             </li>
         )
