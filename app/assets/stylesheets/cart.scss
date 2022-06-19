@@ -47,10 +47,9 @@
 
     .cart-middle {
         display: flex;
-        margin-bottom: 2rem;
+        justify-content: space-between;
         gap: 5%;
-        justify-content: center;
-        align-items: center;
+        margin-bottom: 30px;
 
 
         .cart-payment-container {
