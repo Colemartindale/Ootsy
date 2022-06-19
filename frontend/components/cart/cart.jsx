@@ -207,8 +207,9 @@ class Cart extends React.Component {
                                             </ul>
                                         </label>
                                     </div>
-                                    <div className="payment-total">
-                                        {this.calculateSubtotal()}
+                                    <div className="payment-total-container">
+                                        <h1>Item(s) total</h1>
+                                        <h2>{this.calculateSubtotal()}</h2> 
                                     </div>
                                 </div>
                                 <div className="payment-mid">
@@ -225,10 +226,10 @@ class Cart extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <p>
+                    <div className="offsets">
                         <ImLeaf/>
-                        Etsy offsets carbon emissions from every delivery
-                    </p>
+                        <p>Etsy offsets carbon emissions from every delivery</p> 
+                    </div>
                     {/* <div className="cart-container">
                         <div className="cart-center-col">
                             <div className="cart-headline">

@@ -88,9 +88,10 @@ class CartItem extends React.Component {
                     </div>
                 </div>
                 <div className="cart-item-gift-container">
-                    <label htmlFor="" className="checkbox-container">
-                        <input type="checkbox" />
+                    <label className="checkbox-container">
                         This order is a gift 
+                        <input type="checkbox" />
+                        <span className="checkmark"></span>
                     </label>
                     <p>Prices will not be shown on packing slip</p>
                 </div>
