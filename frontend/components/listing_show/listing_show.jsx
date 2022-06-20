@@ -56,7 +56,7 @@ class ListingShow extends React.Component {
             let oldQuantity;
             let result = false;
 
-            Object.values(this.props.cart.cartItems).forEach(cartItem => {
+            Object.values(this.props.cart).forEach(cartItem => {
                 if (cartItem.product_id === userCart.product_id) {
                     oldQuantity = cartItem.quantity;
                     userCart.id = cartItem.id;
