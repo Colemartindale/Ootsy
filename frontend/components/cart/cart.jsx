@@ -23,7 +23,6 @@ class Cart extends React.Component {
     calculateSubtotal() {
         const { products, cartItems } = this.props;
         if (!cartItems) return null
-        console.log(products, cartItems, "souh;iaeufh;aieuhfaio;euh")
         let sum = 0;
 
         products.forEach(product => {
@@ -33,7 +32,6 @@ class Cart extends React.Component {
                 }
             })
         })
-        console.log(sum, "bnloiwortignoeirng")
         let result = (Math.round(sum * 100) / 100).toFixed(2);
         let array = (result + "").split(".");
         let element = array[0];

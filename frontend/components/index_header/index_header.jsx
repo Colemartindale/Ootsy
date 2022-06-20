@@ -12,7 +12,6 @@ class ListingIndexHeader extends React.Component {
 
 
     render() {
-        console.log(this.props)
         if (!this.props.listings || this.props.listings.length < 53) {
             return null
         };

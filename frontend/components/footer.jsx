@@ -11,7 +11,6 @@ class Footer extends React.Component {
     };
 
     render() {
-        console.log(this.props)
         return (
             <div className="footer">
                 <div className="questions">

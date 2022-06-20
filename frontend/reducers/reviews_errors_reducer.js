@@ -2,7 +2,6 @@ import { RECEIVE_REVIEW_ERRORS, RESET_REVIEW_ERRORS } from "../actions/review_ac
 
 export default (state = [], action) => {
     Object.freeze(state);
-    // console.log(action, 'hyeheyheyheyheyhyeh')
     switch (action.type) {
       case RECEIVE_REVIEW_ERRORS:
         return action.errors;

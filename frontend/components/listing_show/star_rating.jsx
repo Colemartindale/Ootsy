@@ -20,7 +20,6 @@ class StarRating extends React.Component {
     };
     
     render() {
-        // console.log(this.state)
         return (
             <div>
                 {[...Array(5)].map((star, i) => {

@@ -79,13 +79,11 @@ class ListingShow extends React.Component {
     }
 
     render() {
-        // console.log(this.props.listing, 'hi')
         const { listing, reviews } = this.props;
 
         if (!listing) {
             return null
         };
-        console.log(listing, "bloopybloppy")
         let avgReview = 0;
         reviews.forEach(review => {
             avgReview += review.rating
@@ -106,15 +104,15 @@ class ListingShow extends React.Component {
                     <div className="form-container">
                         <CreateReviewFormContainer/>
                     </div>
-                    <ul className="reviews-container" 
-                        style={(reviews.length > 4) ? {height: 500, overflowY: 'scroll'} : {height: 250}}
-                    >
+                    <ul className={(reviews.length > 4) ? "reviews-container-l" : "reviews-container-s"} >
                         <li className="review-li">
                             {reviews.map(review => {
                                 return (
                                     <div className="review-container">
                                         <CgProfile 
-                                            color={(review.id % 2 === 0) ? 'cadetblue' : 'lightcoral'} size={30} className="prof-pic"
+                                            color={(review.id % 2 === 0) ? 'cadetblue' : 'lightcoral'} 
+                                            size={30} 
+                                            className="prof-pic"
                                         />
                                         <div className="review-content">
                                             <span className="name">{review.authorName}</span>
