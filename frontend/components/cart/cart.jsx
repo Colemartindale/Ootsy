@@ -10,8 +10,6 @@ class Cart extends React.Component {
         this.calculateSubtotal = this.calculateSubtotal.bind(this);
         this.numberOfItems = this.numberOfItems.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleDisplay = this.handleDisplay.bind(this);
-        // this.formType = this.formType.bind(this);
     }
 
     componentDidMount() {

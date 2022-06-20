@@ -12,32 +12,12 @@ class CartItem extends React.Component {
         
         this.deleteItem = this.deleteItem.bind(this);
         // this.handleQuantity = this.handleQuantity.bind(this);
-        // this.dynamicId = this.dynamicId.bind(this);
-        // this.handleDropdown = this.handleDropdown.bind(this);
         this.handleDate = this.handleDate.bind(this);
     }
 
     deleteItem() {
         this.props.deleteCartItem(this.props.cartItem.id);
     }
-
-    // handleQuantity() {
-    //     const dropdown = document.getElementById(`quantity-${this.props.i}`);
-    //     this.setState({id: this.props.cartItem.id, quantity: dropdown.value}, 
-    //         ()=>this.props.editCartItem(this.state));
-    // }
-
-    // dynamicId() {
-    //     return `quantity-${this.props.i}`;
-    // }
-
-    // handleDropdown() {
-    //     if (this.props.cartItem.quantity < 10) {
-    //         return this.props.cartItem.quantity;
-    //     } else {
-    //         return 10;
-    //     }
-    // }
 
     handleDate() {
         const current = new Date();

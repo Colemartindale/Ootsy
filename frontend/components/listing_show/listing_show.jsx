@@ -10,7 +10,8 @@ class ListingShow extends React.Component {
     constructor(props) {
         super(props)
         this.addToCart = this.addToCart.bind(this);
-        this.state = { newQuantity: 1}
+        this.state = { newQuantity: 1};
+        this.updateSelect = this.updateSelect.bind(this);
     };
 
     componentDidMount() {
@@ -39,9 +40,14 @@ class ListingShow extends React.Component {
         };
     };
 
+    updateSelect() {
+        const dropdownValue = parseInt(document.getElementById("quantity-select").value);
+        this.setState({newQuantity: dropdownValue});
+    }
+
     addToCart() {
         if (this.props.currentUser !== undefined) {
-            const dummy = {
+            const userCart = {
                 user_id: this.props.currentUser.id,
                 product_id: this.props.listing.id,
                 quantity: 1
@@ -50,25 +56,22 @@ class ListingShow extends React.Component {
             let oldQuantity;
             let result = false;
 
-            Object.values(this.props.cart).forEach(element => {
-                if (element.productId === dummy.product_id) {
-                    oldQuantity = element.quantity;
-                    dummy.id = element.id;
+            Object.values(this.props.cart.cartItems).forEach(cartItem => {
+                if (cartItem.product_id === userCart.product_id) {
+                    oldQuantity = cartItem.quantity;
+                    userCart.id = cartItem.id;
                     result = true;
                 }
             });
             
             if (result) {
-                dummy.quantity = oldQuantity + this.state.newQuantity;
-                this.props.editCartItem(dummy)
-                .then(()=>this.props.getCartItemsById(this.props.currentUser.id))
-                .then(()=>this.props.history.push("/cart"));
-            
+                userCart.quantity = oldQuantity + this.state.newQuantity;
+                this.props.editCartItem(userCart)
+                .then(()=>this.props.getCartItemsById(this.props.currentUser.id));            
             } else {
-                dummy.quantity = this.state.newQuantity;
-                this.props.createCartItem(dummy)
-                    .then(()=>this.props.getCartItemsById(this.props.currentUser.id))
-                    .then(()=>this.props.history.push("/cart"));
+                userCart.quantity = this.state.newQuantity;
+                this.props.createCartItem(userCart)
+                    .then(()=>this.props.getCartItemsById(this.props.currentUser.id));
             }
         } else {
             this.props.history.push("/login")
@@ -138,7 +141,7 @@ class ListingShow extends React.Component {
                         </span>
                     </div>
                     <div className="quantity-container">
-                        <select name="quantity" id="quantity-select">
+                        <select name="quantity" id="quantity-select" onChange={this.updateSelect}>
                             {this.quantityLoop().map(option => (
                                 option
                             ))}

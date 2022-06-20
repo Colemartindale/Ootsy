@@ -51,10 +51,10 @@ class Greeting extends React.Component {
             <img src={window.profilePicLogo} className='profile-logo' />
             <span>{this.props.currentUser.username}</span>
           </div>
-          <div className='orders-container'>
+          {/* <div className='orders-container'>
             <img src={window.ordersIcon} className='orders-icon' />
             <Link to='/orders'>Order History</Link>
-          </div>
+          </div> */}
           <div className='sign-out-container'>
             <img src={window.signOutIcon} className='sign-out-icon' />
             <button className="logout-button" onClick={this.props.logout}>Log Out</button>
