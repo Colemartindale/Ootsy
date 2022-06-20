@@ -234,6 +234,37 @@
     }
 }
 
+.cart-page-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+    font-family: sans-serif;
+
+    h1 {
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 16px;
+        margin-top: 15px;
+        padding-bottom: 30px;
+        color: black;
+        &:hover {
+            color: #595959;
+        }
+    }
+
+    div {
+        margin-top: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+}
+
 .checkout-modal {
     display: flex;
     flex-direction: column;
@@ -260,7 +291,7 @@
     h2 {
         font-weight: 500;
         margin-top: 1.5rem;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1rem;
     }
 

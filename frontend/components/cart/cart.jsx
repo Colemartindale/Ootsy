@@ -109,15 +109,15 @@ class Cart extends React.Component {
 
         if (!this.props.cartItems) {
             return (
-                <div className="cart-page">
-                    <h1>Your cart is empty.</h1>
+                <div className="cart-page-empty">
+                    <h1>{this.props.currentUser.username}, your cart is empty.</h1>
                     <Link to='/'>
                         Discover something unique to fill it up
                     </Link>
-                    <p>
+                    <div>
                         <ImLeaf/>
                         Etsy offsets carbon emissions from every delivery
-                    </p>
+                    </div>
                 </div>
             )
         } else {
