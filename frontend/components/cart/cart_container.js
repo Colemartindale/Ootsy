@@ -1,6 +1,8 @@
 import { connect } from "react-redux";
 import { createCartItem, deleteCartItem, editCartItem, getCartItemsById } from "../../actions/cart_actions";
 import Cart from "./cart";
+import { openModal } from "../../actions/modal_actions";
+
 
 const mSTP = state => ({
     cartItems: state.entities.cart.cartItems ? Object.values(state.entities.cart.cartItems) : null,
@@ -12,7 +14,8 @@ const mDTP = dispatch => ({
     getCartItemsById: userId => dispatch(getCartItemsById(userId)),
     createCartItem: cartItem => dispatch(createCartItem(cartItem)),
     editCartItem: cartItem => dispatch(editCartItem(cartItem)),
-    deleteCartItem: cartItemId => dispatch(deleteCartItem(cartItemId))
+    deleteCartItem: cartItemId => dispatch(deleteCartItem(cartItemId)),
+    openModal: type => dispatch(openModal(type))
 })
 
 export default connect(mSTP,mDTP)(Cart);

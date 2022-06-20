@@ -5,6 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import EditFormContainer from '../review_form/edit_review_container';
 import HelpCenter from "../help_center_modal";
+import CheckoutModal from '../cart/checkout_modal';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -23,6 +24,9 @@ function Modal({modal, closeModal}) {
       break;
     case "help-center":
       component = <HelpCenter />;
+      break;
+    case "checkout":
+      component = <CheckoutModal />;
       break;
     default:
       return null;

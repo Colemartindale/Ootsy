@@ -95,50 +95,19 @@ class Cart extends React.Component {
     }
 
     handleSubmit() {
-
         if (this.props.products.length < 1) {return null}
-
         let that = this;
         this.props.cartItems.forEach(cartItem => (
                 that.props.deleteCartItem(cartItem.id)
-        ))
-        this.props.history.push("/payment");
+        ));
+        this.props.history.push("/");
+        this.props.openModal('checkout');
     }
 
-    // handleDisplay() {
-    //     if (this.props.products) {
-    //         return (
-    //             <div className="cart-main">
-    //                 {this.cartItemList()}
-    //                 {/* <div className="cart-subtotal">
-    //                     <div>
-    //                         Subtotal: {this.calculateSubtotal()}
-    //                     </div>
-    //                 </div> */}
-    //             </div>
-    //         )
-    //     } else {
-    //         return (
-    //             <Link className="cart-main" to="/">
-    //                 Discover something unique to fill it up
-    //             </Link>
-    //         )
-    //     }
-    // }
-
-    // formType() {
-    //     // if (this.props.products.length < 1) {
-    //     if (!this.props.products) {
-    //         return "Your Cart is Empty."
-    //     } else {
-    //         return "Shopping Cart"
-    //     }
-    // }
-
     render() {
-        if (this.props.products === undefined) {return null}
+        if (this.props.cartItems === undefined) {return null}
 
-        if (!this.props.products) {
+        if (!this.props.cartItems) {
             return (
                 <div className="cart-page">
                     <h1>Your cart is empty.</h1>
@@ -172,9 +141,6 @@ class Cart extends React.Component {
                             <div className="cart-payment">
                                 <div className="payment-top">
                                     <h1>How you'll pay</h1>
-                                    {/* <div className="payment-inputs-container">
-
-                                    </div> */}
                                     <div className="payment-inputs-container">
                                         <label className="check-1">
                                             <input name="payment" type='radio' defaultChecked/>
@@ -220,7 +186,7 @@ class Cart extends React.Component {
                                     <h3>FREE</h3>
                                 </div>
                                 <div className="payment-bottom">
-                                    <button>Proceed to checkout</button>
+                                    <button onClick={this.handleSubmit} >Proceed to checkout</button>
                                     <p>*Additional duties and taxes may apply</p>
                                 </div>
                             </div>
@@ -230,22 +196,6 @@ class Cart extends React.Component {
                         <ImLeaf/>
                         <p>Etsy offsets carbon emissions from every delivery</p> 
                     </div>
-                    {/* <div className="cart-container">
-                        <div className="cart-center-col">
-                            <div className="cart-headline">
-                                <h1>Shopping Cart</h1>   
-                            </div>
-                            {this.handleDisplay()}
-                        </div>
-                        <div className="cart-right-col">
-                            <div className="cart-subtotal-card">
-                                <div className="cart-subtotal-headline">
-                                    <h1>Subtotal {this.numberOfItems()}: {this.calculateSubtotal()}</h1>
-                                </div>
-                                    <button onClick={this.handleSubmit} className="checkout">Proceed to checkout</button>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             )
         }
