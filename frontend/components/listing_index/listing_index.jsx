@@ -22,7 +22,6 @@ class ListingIndex extends React.Component {
         return (
             <div className="index-page">
                 <IndexHeaderContainer />
-
                 <div className="home-section">
                     <ul id="home-ul">
                         <span className="cat">Home & Living</span>
@@ -35,8 +34,11 @@ class ListingIndex extends React.Component {
                                 return (
                                     <div className={`pic${i - 13}`} 
                                         onClick={() => this.props.history.push(`/listings/${listing.id}`)}
+                                        key={listing.id}
                                     >
-                                        <span className="price"><FaShippingFast className="ship"/>{" "}${listing.price}</span>
+                                        <span className="price">
+                                            <FaShippingFast className="ship"/>{" "}${listing.price}
+                                        </span>
                                         <img src={listing.photoUrl} alt="home" />
                                     </div> 
                                 )
@@ -59,22 +61,26 @@ class ListingIndex extends React.Component {
                                     return (
                                         <div className={`pic${i - 33}`} 
                                             onClick={() => this.props.history.push(`/listings/${listing.id}`)}
+                                            key={listing.id}
                                         >
-                                            <span className="price"><FaShippingFast className="ship"/>{" "}${listing.price}</span>
+                                            <span className="price">
+                                                <FaShippingFast className="ship"/>{" "}${listing.price}
+                                            </span>
                                             <img src={listing.photoUrl} />
                                         </div>
                                     )
                                     }
                             })}
                             <p className="smash-p">
-                               Super Smash Bros, a N64 game released in 1999, has 
-                               captured fans around the world. We have gifts for any Smash fan.
+                                Super Smash Bros, a N64 game released in 1999, has 
+                                captured fans around the world. We have gifts for any Smash fan.
                             </p>
                         </ul>
                 </div>
                 <div className="fathers-section">
                         <ul>
-                            <Link className="cat" to='/listings/category/fathers'>Dicover Unique Father's Day Gifts
+                            <Link className="cat" to='/listings/category/fathers'>
+                                Dicover Unique Father's Day Gifts
                                 <BsArrowRight size={20} className='arrow'/>
                             </Link>
                             {listings.map((listing, i) => {
@@ -82,8 +88,11 @@ class ListingIndex extends React.Component {
                                     return (
                                         <div className={`pic${i - 46}`} 
                                             onClick={() => this.props.history.push(`/listings/${listing.id}`)}
+                                            key={listing.id}
                                         >
-                                            <span className="price"><FaShippingFast className="ship"/>{" "}${listing.price}</span>
+                                            <span className="price">
+                                                <FaShippingFast className="ship"/>{" "}${listing.price}
+                                            </span>
                                             <img src={listing.photoUrl} />
                                         </div>
                                     )
@@ -120,7 +129,6 @@ class ListingIndex extends React.Component {
                         </span>
                     </p>
                 </div>
-           
             </div>
         )
     };
