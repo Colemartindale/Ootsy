@@ -98,7 +98,7 @@ class ListingShow extends React.Component {
                         <div className="avg-review">
                             {reviews.length}{" "}
                             {(reviews.length === 1) ? 'review' : 'reviews'}
-                            <span><ReviewStarRating rating={avgReviewRating} /></span>
+                            <span><ReviewStarRating rating={avgReviewRating} listing={listing} /></span>
                         </div>
                     </div>
                     <div className="form-container">
@@ -108,7 +108,7 @@ class ListingShow extends React.Component {
                         <li className="review-li">
                             {reviews.map(review => {
                                 return (
-                                    <div className="review-container">
+                                    <div className="review-container" key={review.id}>
                                         <CgProfile 
                                             color={(review.id % 2 === 0) ? 'cadetblue' : 'lightcoral'} 
                                             size={30} 
