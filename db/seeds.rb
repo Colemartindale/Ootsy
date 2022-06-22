@@ -22,15 +22,6 @@ user4 = User.create(username: 'Brian Bui', password: '777777', shop_name: "Spi's
 user5 = User.create(username: 'Ernesto Montoya', password: '123456', shop_name: "Funky Finds")
 demo = User.create(username: 'demo user', password: 'demopw', shop_name: "Demo Shop")
 
-# Listing.create!(
-#     product_name: "", 
-#     description: "", 
-#     price: , 
-#     category: "", 
-#     quantity: , 
-#     tags: "", 
-#     shop_id: )
-
 # jewelry & accessories
 jewelry1 = Listing.create!(
     product_name: 'Real Leather Belt - Wood Buckle Forest Engraving', 
