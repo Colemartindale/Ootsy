@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { getCartItemsById } from "../../actions/cart_actions";
 import CartGreeting from "./cart_greeting";
+import { openModal } from "../../actions/modal_actions";
 
 const mSTP = state => ({
     cartItems: Object.values(state.entities.cart),
@@ -9,7 +10,8 @@ const mSTP = state => ({
 })
 
 const mDTP = dispatch => ({
-    getCartItemsById: userId => dispatch(getCartItemsById(userId))
+    getCartItemsById: userId => dispatch(getCartItemsById(userId)),
+    openModal: (modal) => dispatch(openModal(modal))
 })
 
 export default withRouter(connect(mSTP, mDTP)(CartGreeting));

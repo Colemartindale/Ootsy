@@ -14,7 +14,7 @@ class ReviewStarRating extends React.Component {
                     const ratingValue = i + 1;
 
                     return (
-                        <label key={this.props.listing.id}>
+                        <label>
                             <input 
                                 type="radio" 
                                 name="rating" 

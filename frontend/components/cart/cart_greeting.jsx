@@ -48,19 +48,10 @@ class CartGreeting extends React.Component {
         const { currentUserId } = this.props;
         if (currentUserId === undefined) { return null }
         return (
-            // <Link to="/cart">
-            //     <div className="cart-greeting">
-            //         <div className="cart-counter">
-            //             <p>{this.cartQuantity()}</p>
-            //             <img src={window.cart} alt="" />
-            //         </div>
-            //         <p>Cart</p>
-            //     </div>
-            // </Link>
             <div className="cart-logo-container">
-                <Link to='/cart'>
+                <div onClick={ currentUserId ? () => this.props.history.push('/cart') : () => this.props.openModal('login')}>
                     <img src={window.cartLogo} className='cart-logo' />
-                </Link>
+                </div>
             </div>
         )
     }

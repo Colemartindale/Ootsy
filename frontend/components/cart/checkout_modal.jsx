@@ -15,7 +15,7 @@ class CheckoutModal extends React.Component {
                     Take a look at my portfolio if you 
                     enjoyed your experience with Ootsy
                 </h2>
-                <Link to={"#"}>Cole's Portfolio</Link>
+                <a href="https://colemartindale.me/">Cole's Portfolio</a>
             </div>
         )
     }

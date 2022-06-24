@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
                 <input 
                     type="text" 
                     className="search" 
-                    placeholder='Search for anything'
+                    placeholder='Search for "gift"'
                     onKeyDown={this.handleSearch}
                 />
                 <div className="search-logo-container">

@@ -67,19 +67,20 @@ class ListingShow extends React.Component {
             if (result) {
                 userCart.quantity = oldQuantity + this.state.newQuantity;
                 this.props.editCartItem(userCart)
-                .then(()=>this.props.getCartItemsById(this.props.currentUser.id));            
+                .then(() => this.props.getCartItemsById(this.props.currentUser.id)) 
+                .then(() => this.props.history.push('/cart')) 
             } else {
                 userCart.quantity = this.state.newQuantity;
                 this.props.createCartItem(userCart)
-                    .then(()=>this.props.getCartItemsById(this.props.currentUser.id));
+                    .then(() => this.props.getCartItemsById(this.props.currentUser.id))
+                    .then(() => this.props.history.push('/cart'))
             }
-        } else {
-            this.props.history.push("/login")
         }
+        
     }
 
     render() {
-        const { listing, reviews } = this.props;
+        const { listing, reviews, currentUser } = this.props;
 
         if (!listing) {
             return null
@@ -145,9 +146,11 @@ class ListingShow extends React.Component {
                             ))}
                         </select>
                     </div>
-                    <Link  to='/cart' className="button-link" onClick={this.addToCart}>
+                    <div  
+                    className="button-link" 
+                    onClick={ currentUser ? this.addToCart : () => this.props.openModal('login')}>
                         <button className='button'>Add to Cart</button> 
-                    </Link>
+                    </div>
                     <div className="want-this">
                         <FaCartPlus size={40}/>
                         <p>Other people want this. 
