@@ -14,21 +14,31 @@ The header includes a navigation bar with search functionality that looks up ite
 
 Next to the search bar in the header there is a link to the sign in/register modal. A user's sign in status will affect what feature they have access to. If the user is not signed in and tries to use a feature that requires log in, the sign in/ register modal will appear and prompt them to sign in/ register. Users have the option to use a demo account to navigate the site. 
 
+![](https://github.com/Colemartindale/Ootsy/blob/main/app/assets/images/signin-modal.png)
+
 2. Reviews
 
 On a listing's show page, the user will have the option to leave a review along with a star rating. After posting a review, the user can edit or delete said review by clicking the corresponding buttons. Only reviews made by the current user can be edited and deleted.
+
+![](https://github.com/Colemartindale/Ootsy/blob/main/app/assets/images/reviews.png)
 
 3. Search
 
 Based a key words typed into the search input, Ootsy will render a index page of related items.
 
+![](https://github.com/Colemartindale/Ootsy/blob/main/app/assets/images/search.gif)
+
 4. Splash Page
 
 Ootsy's splash page implements SCSS grid layouts to add style and shape to photos from different categories. 
 
+![](https://github.com/Colemartindale/Ootsy/blob/main/app/assets/images/splash.png)
+
 5. Cart
 
 Users can add specified quantities of listings to cart and checkout for demonstration purposes.
+
+![](https://github.com/Colemartindale/Ootsy/blob/main/app/assets/images/cart.png)
 
 ---
 
