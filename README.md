@@ -20,11 +20,15 @@ On a listing's show page, the user will have the option to leave a review along 
 
 3. Search
 
-Based a key words typed into the search input, Ootsy will render a index page of related items
+Based a key words typed into the search input, Ootsy will render a index page of related items.
 
 4. Splash Page
 
 Ootsy's splash page implements SCSS grid layouts to add style and shape to photos from different categories. 
+
+5. Cart
+
+Users can add specified quantities of listings to cart and checkout for demonstration purposes.
 
 ---
 
