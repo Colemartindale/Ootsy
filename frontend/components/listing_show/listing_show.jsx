@@ -105,7 +105,7 @@ class ListingShow extends React.Component {
                     <div className="form-container">
                         <CreateReviewFormContainer/>
                     </div>
-                    <ul className={(reviews.length > 4) ? "reviews-container-l" : "reviews-container-s"} >
+                    <ul className={(reviews.length > 2) ? "reviews-container-l" : "reviews-container-s"} >
                         <li className="review-li">
                             {reviews.map(review => {
                                 return (

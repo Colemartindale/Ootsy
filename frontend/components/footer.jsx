@@ -35,7 +35,7 @@ class Footer extends React.Component {
                         <a href="https://www.linkedin.com/in/cole-martindale-385045147/">
                             <BsLinkedin className="link" size={25} />
                         </a>
-                        <a href="#">
+                        <a href="https://colemartindale.me">
                             <BsPersonSquare className="port" size={25}/>
                         </a>
                     </div>

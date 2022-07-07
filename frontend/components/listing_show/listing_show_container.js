@@ -28,4 +28,4 @@ const mDTP = (dispatch, ownProps) => {
     }
 };
 
-export default connect(mSTP, mDTP)(ListingShow);
+export default connect(mSTP, mDTP)(ListingShow);  
